@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Registro" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Mencione três palavras levando 1 segundo para cada uma. Peça ao paciente para repetir as três palavras que voê mencionou. Estabeleça 1 ponto para cada palavra certa." />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="VASO               CARRO               TIJOLO" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVRegVaso"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginLeft="16dp"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVRegCarro"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_alignTop="@+id/imgbtnERegCarro"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnERegVaso"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignTop="@+id/imgbtnVRegVaso"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnERegCarro"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/imgbtnVRegVaso"
+        android:layout_toLeftOf="@+id/imgbtnVRegCarro"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVRegTijolo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignTop="@+id/imgbtnVRegCarro"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnERegTijolo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/imgbtnVRegTijolo"
+        android:layout_toLeftOf="@+id/imgbtnVRegTijolo"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnEnvierRegistro"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/imgbtnVRegCarro"
+        android:src="@android:drawable/btn_star" />
+
+</RelativeLayout>
