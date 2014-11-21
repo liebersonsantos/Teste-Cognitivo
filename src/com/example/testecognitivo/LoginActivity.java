@@ -30,8 +30,13 @@ public class LoginActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
+				/***
+				 * Verificação de login 
+				 * se ususario for valido ira para tela de 
+				 */
 				if ((edtNome.getText().toString().equals("Lieberson")) && (edtSenha.getText().toString().equals(""))) {					
-					//mensagem de logado
+					
+					
 					Toast.makeText(LoginActivity.this, "Você está Logado cabaço", Toast.LENGTH_SHORT).show();
 				}
 			}

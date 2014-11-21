@@ -2,8 +2,10 @@
 <resources>
 
     <string name="app_name">Teste Cognitivo.</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="tairo">Tairo</string>
+    <string name="string_txtNome_login">Nome</string>
+    <string name="string_txtSenha_login">Senha</string>
+    <string name="string_btnEntrar_login">Entrar</string>
+    <string name="string_btnCadastrar_login">Cadastrar</string>
 
 </resources>
