@@ -22,23 +22,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="Apresentacao" >
+        <activity android:name=".Apresentacao" >
         </activity>
-        <activity android:name="AtencaoCalculoActivity" >
+        <activity android:name=".AtencaoCalculoActivity" >
         </activity>
-        <activity android:name="CadastroMedicoActivity" >
+        <activity android:name=".CadastroMedicoActivity" >
         </activity>
-        <activity android:name="DadosPacienteActivity" >
+        <activity android:name=".DadosPacienteActivity" >
         </activity>
-        <activity android:name="LembrancasActivity" >
+        <activity android:name=".LembrancasActivity" >
         </activity>
-        <activity android:name="Linguagem" >
+        <activity android:name=".Linguagem" >
         </activity>
-        <activity android:name="LocalizacaoActivity" >
+        <activity android:name=".LocalizacaoActivity" >
         </activity>
-        <activity android:name="OrientacaoTemporalActivity" >
+        <activity android:name=".OrientacaoTemporalActivity" >
         </activity>
-        <activity android:name="RegistroActivity" >
+        <activity android:name=".RegistroActivity" >
         </activity>
     </application>
 

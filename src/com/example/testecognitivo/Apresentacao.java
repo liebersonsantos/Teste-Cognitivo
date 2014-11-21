@@ -16,6 +16,8 @@ public class Apresentacao extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.apresentacao);
+		
+		btnInicioTeste = (Button) findViewById(R.id.btnInicioTeste);
 
 		btnInicioTeste.setOnClickListener(new View.OnClickListener() {
 			@Override
