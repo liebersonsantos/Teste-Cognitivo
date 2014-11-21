@@ -9,10 +9,11 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:text="Registro" />
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="31dp"
+        android:text="Lembranças" />
 
     <TextView
         android:id="@+id/textView2"
@@ -20,66 +21,83 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:gravity="center"
-        android:text="Mencione três palavras levando 1 segundo para cada uma. Peça ao paciente para repetir as três palavras que voê mencionou. Estabeleça 1 ponto para cada palavra certa." />
+        android:text="Pergunte para o paciente o nome das três palavras apresentadas no teste Registro" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        android:text="VASO               CARRO               TIJOLO" />
+        android:layout_marginTop="60dp"
+        android:text="VASO" />
 
-    <ImageButton
-        android:id="@+id/imgbtnVRegVaso"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3"
-        android:layout_marginLeft="16dp"
-        android:src="@android:drawable/btn_star" />
+        android:layout_marginTop="26dp"
+        android:text="CARRO" />
 
-    <ImageButton
-        android:id="@+id/imgbtnVRegCarro"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_alignTop="@+id/imgbtnERegCarro"
-        android:src="@android:drawable/btn_star" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="33dp"
+        android:text="TIJOLO" />
 
     <ImageButton
         android:id="@+id/imgbtnEvasoLembranca"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignTop="@+id/imgbtnVRegVaso"
+        android:layout_above="@+id/textView4"
+        android:layout_centerHorizontal="true"
         android:src="@android:drawable/btn_star" />
 
     <ImageButton
-        android:id="@+id/imgbtnERegCarro"
+        android:id="@+id/imgbtnVvasoLembranca"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignTop="@+id/imgbtnVRegVaso"
-        android:layout_toLeftOf="@+id/imgbtnVRegCarro"
+        android:layout_above="@+id/textView4"
+        android:layout_toRightOf="@+id/textView1"
         android:src="@android:drawable/btn_star" />
 
     <ImageButton
-        android:id="@+id/imgbtnVRegTijolo"
+        android:id="@+id/imgbtnEcarroLembranca"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignTop="@+id/imgbtnVRegCarro"
+        android:layout_above="@+id/textView5"
+        android:layout_alignLeft="@+id/imgbtnEvasoLembranca"
         android:src="@android:drawable/btn_star" />
 
     <ImageButton
-        android:id="@+id/imgbtnERegTijolo"
+        android:id="@+id/imgbtnVcarroLembranca"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignTop="@+id/imgbtnVRegTijolo"
-        android:layout_toLeftOf="@+id/imgbtnVRegTijolo"
+        android:layout_above="@+id/textView5"
+        android:layout_toRightOf="@+id/textView1"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnEtijoloLembranca"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/imgbtnEcarroLembranca"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVtijoloLembranca"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/imgbtnVcarroLembranca"
+        android:layout_alignTop="@+id/imgbtnEtijoloLembranca"
         android:src="@android:drawable/btn_star" />
 
     <ImageButton
@@ -87,7 +105,7 @@
         android:layout_width="120dp"
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/imgbtnVRegCarro"
+        android:layout_toRightOf="@+id/textView1"
         android:src="@android:drawable/btn_star" />
 
 </RelativeLayout>
