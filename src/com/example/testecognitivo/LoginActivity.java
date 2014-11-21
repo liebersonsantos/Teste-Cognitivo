@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class PrincialActivity extends Activity {
+public class LoginActivity extends Activity {
 
 	 private EditText edtNome,edtSenha;
 	 private Button btnEntrar;
@@ -17,7 +17,7 @@ public class PrincialActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);		
-		setContentView(R.layout.activity_princial);
+		setContentView(R.layout.login_activity);
 		
 		/** Linka os atributos do java com o xml*/
 		edtNome = (EditText) findViewById(R.id.edtNome);
@@ -32,7 +32,7 @@ public class PrincialActivity extends Activity {
 				
 				if ((edtNome.getText().toString().equals("Lieberson")) && (edtSenha.getText().toString().equals(""))) {					
 					//mensagem de logado
-					Toast.makeText(PrincialActivity.this, "Você está Logado cabaço", Toast.LENGTH_SHORT).show();
+					Toast.makeText(LoginActivity.this, "Você está Logado cabaço", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
