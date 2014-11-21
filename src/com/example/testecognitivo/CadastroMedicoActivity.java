@@ -38,7 +38,9 @@ public class CadastroMedicoActivity extends Activity {
 		 * @author lieberson 
 		 * captura o evento de clique do botao
 		 */
-
+		
+		btnSalvarMed = (Button) findViewById(R.id.btnSalvarMed);
+		
 		btnSalvarMed.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
