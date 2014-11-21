@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/txtCadMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:text="Cadastro do Médico" />
+
+    <TextView
+        android:id="@+id/txtNomeMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtCadMed"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="22dp"
+        android:text="Nome" />
+
+    <TextView
+        android:id="@+id/txtCrm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtNomeMed"
+        android:layout_below="@+id/txtNomeMed"
+        android:layout_marginTop="27dp"
+        android:text="CRM" />
+
+    <TextView
+        android:id="@+id/txtLoginMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtEspecialidade"
+        android:layout_below="@+id/txtEspecialidade"
+        android:layout_marginTop="38dp"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/txtSenhaMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLoginMed"
+        android:layout_below="@+id/txtLoginMed"
+        android:layout_marginTop="37dp"
+        android:text="Senha" />
+
+    <EditText
+        android:id="@+id/edtNomeMed"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtNomeMed"
+        android:layout_alignBottom="@+id/txtNomeMed"
+        android:layout_alignLeft="@+id/txtCadMed"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSalvarMed"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:text="Salvar" />
+
+    <EditText
+        android:id="@+id/edtCrmMed"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtCrm"
+        android:layout_alignBottom="@+id/txtCrm"
+        android:layout_alignLeft="@+id/edtNomeMed"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/edtEspecialidadeMed"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtEspecialidade"
+        android:layout_alignBottom="@+id/txtEspecialidade"
+        android:layout_alignLeft="@+id/btnSalvarMed"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/edtLoginMed"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtLoginMed"
+        android:layout_alignBottom="@+id/txtLoginMed"
+        android:layout_alignLeft="@+id/edtEspecialidadeMed"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/edtSenhaMed"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtSenhaMed"
+        android:layout_alignBottom="@+id/txtSenhaMed"
+        android:layout_alignLeft="@+id/edtLoginMed"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/txtEspecialidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtCrm"
+        android:layout_below="@+id/edtCrmMed"
+        android:layout_marginTop="24dp"
+        android:text="Especialidade" />
+
+</RelativeLayout>
