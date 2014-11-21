@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="491dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textView1"
+            android:layout_weight="0.84"
+            android:gravity="center"
+            android:text="2"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="222dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center|left"
+            android:text="Localização"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/btnCertoLocalizacao"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/btnErradoLocalizacao"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnErradoLocalizacao"
+            android:layout_toRightOf="@+id/btnErradoLocalizacao"
+            android:background="@drawable/ic_action_accept" />
+
+        <ImageButton
+            android:id="@+id/btnErradoLocalizacao"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_marginLeft="31dp"
+            android:layout_toRightOf="@+id/textView3"
+            android:background="@drawable/ic_action_remove"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="42dp"
+            android:text="2.1 - Em qual local estamos ?" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnErradoLocalizacao"
+            android:layout_marginTop="23dp"
+            android:text="2.2 - Qual o nome da instituição ?" />
+
+        <ImageButton
+            android:id="@+id/btnErradoInstituicao"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_toLeftOf="@+id/btnCertoLocalizacao"
+            android:background="@drawable/ic_action_remove"
+            android:padding="2dp" />
+
+        <ImageButton
+            android:id="@+id/btnCertoInstituicao"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnCertoLocalizacao"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnErradoInstituicao"
+            android:background="@drawable/ic_action_accept" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnCertoInstituicao"
+            android:layout_marginTop="21dp"
+            android:text="2.3 - Qual o bairro ?" />
+
+        <ImageButton
+            android:id="@+id/btnErradoBairro"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/btnErradoInstituicao"
+            android:layout_alignTop="@+id/textView5"
+            android:background="@drawable/ic_action_remove"
+            android:padding="2dp" />
+
+        <ImageButton
+            android:id="@+id/btnCertoBairro"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnCertoInstituicao"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnErradoBairro"
+            android:background="@drawable/ic_action_accept" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnCertoBairro"
+            android:layout_marginTop="17dp"
+            android:text="2.4 - Qual a cidade ?" />
+
+        <ImageButton
+            android:id="@+id/btnErradoCidade"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/btnErradoBairro"
+            android:layout_alignTop="@+id/textView6"
+            android:background="@drawable/ic_action_remove"
+            android:padding="2dp" />
+
+        <ImageButton
+            android:id="@+id/btnCertoCidade"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnErradoCidade"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/btnErradoCidade"
+            android:background="@drawable/ic_action_accept" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnErradoCidade"
+            android:layout_marginTop="28dp"
+            android:text="2.5 - Qual estado ?" />
+
+        <ImageButton
+            android:id="@+id/btnErradoEstado"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/btnErradoCidade"
+            android:layout_alignTop="@+id/textView7"
+            android:background="@drawable/ic_action_remove"
+            android:padding="2dp" />
+
+        <ImageButton
+            android:id="@+id/btnCertoEstado"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnCertoCidade"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnErradoEstado"
+            android:background="@drawable/ic_action_accept" />
+
+        <Button
+            android:id="@+id/btnProxiamPgLocalizacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_action_send_now" />
+
+    </RelativeLayout>
+
+</ScrollView>
