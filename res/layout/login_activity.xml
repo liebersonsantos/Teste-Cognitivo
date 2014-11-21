@@ -70,22 +70,23 @@
                 android:layout_marginTop="20dp"
                 android:text="Senha" />
 
-            <EditText
-                android:id="@+id/edtNome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/txtBenvindo"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:ems="10" />
-
             <TextView
                 android:id="@+id/txtNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/edtNome"
-                android:layout_alignRight="@+id/linearLayout1"
+                android:layout_alignBottom="@+id/txtBenvindo"
+                android:layout_alignRight="@+id/txtSenha"
                 android:text="Nome" />
+
+            <EditText
+                android:id="@+id/edtNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtBenvindo"
+                android:ems="10" />
+
         </RelativeLayout>
 
     </ScrollView>
