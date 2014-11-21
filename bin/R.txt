@@ -499,7 +499,7 @@ int layout atencao_calculo 0x7f030018
 int layout cadastro_medico 0x7f030019
 int layout dados_paciente 0x7f03001a
 int layout login_activity 0x7f03001b
-int layout orientacao_temporal 0x7f03001c
+int layout orientacao_temporal2 0x7f03001c
 int layout registro 0x7f03001d
 int layout support_simple_spinner_dropdown_item 0x7f03001e
 int menu principal 0x7f0c0000

@@ -10,7 +10,7 @@ public class OrientacaoTemporalActivity extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.orientacao_temporal);
+		setContentView(R.layout.orientacao_temporal2);
 		
 	}
 
