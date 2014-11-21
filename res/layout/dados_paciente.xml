@@ -84,7 +84,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/edtNaturalidade"
+            android:id="@+id/edtNaturalidadePaciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView6"
@@ -97,11 +97,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/edtNaturalidade"
+            android:layout_below="@+id/edtNaturalidadePaciente"
             android:text="Nacionalidade" />
 
         <EditText
-            android:id="@+id/edtNacionalidade"
+            android:id="@+id/edtNacionalidadePaciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -113,7 +113,7 @@
             android:id="@+id/btnSalvarDadosPaciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/edtNaturalidade"
+            android:layout_alignLeft="@+id/edtNaturalidadePaciente"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:text="Salvar" />

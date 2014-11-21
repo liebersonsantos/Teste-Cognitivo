@@ -1,6 +1,7 @@
 package com.example.testecognitivo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,16 +29,21 @@ public class LoginActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				
 				/***
 				 * Verificação de login 
-				 * se ususario for valido ira para tela de 
+				 * se ususario for valido ira para tela de dados d paciente
 				 */
 				if ((edtNome.getText().toString().equals("Lieberson")) && (edtSenha.getText().toString().equals(""))) {					
 					
+					/**
+					 * @author tairo
+					 * cria a Intent para ser enviada para outra Activity
+					 */
+					Intent intent = new Intent(LoginActivity.this,DadosPacienteActivity.class);
+					intent.putExtra("nomeMedico", edtNome.getText().toString());
+					startActivity(intent);
 					
-					Toast.makeText(LoginActivity.this, "Você está Logado cabaço", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
