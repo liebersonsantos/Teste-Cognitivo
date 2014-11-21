@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Linguagem" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:gravity="center"
+        android:text="Aponte para um lápis e um relógio. Peça para o paciente dizer o nome dos objetos conforme você aponta." />
+
+    <ImageButton
+        android:id="@+id/imgbtnEnviarLinguagem"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnELinguagem"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignTop="@+id/imgbtnVLinguagem"
+        android:src="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVLinguagem"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="50dp"
+        android:layout_toLeftOf="@+id/imgbtnEnviarLinguagem"
+        android:src="@android:drawable/btn_star" />
+
+</RelativeLayout>

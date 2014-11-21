@@ -53,7 +53,7 @@
         android:text="TIJOLO" />
 
     <ImageButton
-        android:id="@+id/imgbtnEvasoLembranca"
+        android:id="@+id/imgbtnVLinguagem"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_above="@+id/textView4"
@@ -73,7 +73,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_above="@+id/textView5"
-        android:layout_alignLeft="@+id/imgbtnEvasoLembranca"
+        android:layout_alignLeft="@+id/imgbtnVLinguagem"
         android:src="@android:drawable/btn_star" />
 
     <ImageButton
