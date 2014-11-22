@@ -8,12 +8,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class LoginActivity extends Activity {
 
 	 private EditText edtNome,edtSenha;
-	 private Button btnEntrar;
+	 private Button btnEntrar, btnCadastrar;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +23,21 @@ public class LoginActivity extends Activity {
 		edtNome = (EditText) findViewById(R.id.edtNome);
 		edtSenha = (EditText) findViewById(R.id.edtSenha);
 		btnEntrar = (Button) findViewById(R.id.btnEntrar);
+		btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
 		
-		btnEntrar.setOnClickListener(new View.OnClickListener() {
+		btnCadastrar.setOnClickListener(new View.OnClickListener() {
 			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				Intent intent = new Intent(LoginActivity.this, CadastroMedicoActivity.class);
+				startActivity(intent);
+				
+			}
+		});
+		btnEntrar.setOnClickListener(new View.OnClickListener() {
+				
 			@Override
 			public void onClick(View v) {
 				
