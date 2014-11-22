@@ -17,7 +17,7 @@ public class RegistroActivity extends Activity{
 		
 		setContentView(R.layout.registro);
 		
-		imgbtnEnviarRegistro = (ImageButton) findViewById(R.id.imgbtnEnviarRegistro);
+		imgbtnEnviarRegistro = (ImageButton) findViewById(R.id.imgBtnEnviarLembrancas);
 		imgbtnEnviarRegistro.setOnClickListener(new View.OnClickListener() {
 			
 			@Override

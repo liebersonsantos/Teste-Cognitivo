@@ -25,7 +25,7 @@
         android:text="Aponte para um lápis e um relógio. Peça para o paciente dizer o nome dos objetos conforme você aponta." />
 
     <ImageButton
-        android:id="@+id/imgbtnEnviarLinguagem"
+        android:id="@+id/imgBtnEnviarLinguagem2"
         android:layout_width="120dp"
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
@@ -47,7 +47,7 @@
         android:layout_height="30dp"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="50dp"
-        android:layout_toLeftOf="@+id/imgbtnEnviarLinguagem"
+        android:layout_toLeftOf="@+id/imgBtnEnviarLinguagem2"
         android:src="@android:drawable/btn_star" />
 
 </RelativeLayout>

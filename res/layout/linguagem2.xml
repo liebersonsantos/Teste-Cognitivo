@@ -32,4 +32,12 @@
         android:layout_marginTop="27dp"
         android:text="&quot;...Nem aqui, nem alí, nem lá...&quot;" />
 
+    <ImageButton
+        android:id="@+id/imgBtnEnviarLinguagem2"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:src="@android:drawable/btn_star" />
+
 </RelativeLayout>
