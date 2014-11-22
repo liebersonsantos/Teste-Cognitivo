@@ -27,7 +27,7 @@ public class OrientacaoTemporalActivity extends Activity{
 				
 				Intent intent = new Intent(OrientacaoTemporalActivity.this, RegistroActivity.class);
 				startActivity(intent);
-				
+
 			}
 		});
 		
