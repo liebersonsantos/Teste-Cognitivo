@@ -41,4 +41,20 @@
         android:layout_toRightOf="@+id/textView1"
         android:background="@drawable/ic_action_send_now" />
 
+    <ImageButton
+        android:id="@+id/imgbtnElinguagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVlinguagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgBtnEnviarLinguagem2"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher_certo" />
+
 </RelativeLayout>
