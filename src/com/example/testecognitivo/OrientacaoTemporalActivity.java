@@ -18,7 +18,7 @@ public class OrientacaoTemporalActivity extends Activity{
 		
 		setContentView(R.layout.orientacao_temporal2);
 		
-		imgbtnEnviarAtencaotemp = (ImageButton) findViewById(R.id.imgbtnEnviarAtencaoTemp);
+		imgbtnEnviarAtencaotemp = (ImageButton) findViewById(R.id.imgbtnEnviarAtencaoCalculo);
 		imgbtnEnviarAtencaotemp.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
