@@ -34,6 +34,10 @@
         </activity>
         <activity android:name=".Linguagem" >
         </activity>
+        <activity android:name=".Linguagem2" >
+        </activity>
+        <activity android:name=".Linguagem3" >
+        </activity>
         <activity android:name=".LocalizacaoActivity" >
         </activity>
         <activity android:name=".OrientacaoTemporalActivity" >

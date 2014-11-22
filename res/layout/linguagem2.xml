@@ -34,10 +34,11 @@
 
     <ImageButton
         android:id="@+id/imgBtnEnviarLinguagem2"
-        android:layout_width="120dp"
-        android:layout_height="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/textView1"
-        android:src="@android:drawable/btn_star" />
+        android:background="@drawable/ic_action_send_now" />
 
 </RelativeLayout>

@@ -27,12 +27,14 @@ public class DadosPacienteActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dados_paciente);
-
-		Intent intent = getIntent();
-		String nomeMedico = intent.getStringExtra("nomeMedico");
-		Toast.makeText(DadosPacienteActivity.this, nomeMedico,
-				Toast.LENGTH_SHORT).show();
-
+		
+		/*
+		 * Intent intent = getIntent(); String nomeMedico =
+		 * intent.getStringExtra("nomeMedico");
+		 * Toast.makeText(DadosPacienteActivity.this, nomeMedico,
+		 * Toast.LENGTH_SHORT).show();
+		 */
+		
 		/**
 		 * Linka as variaveis do java com o xml
 		 */
@@ -53,8 +55,9 @@ public class DadosPacienteActivity extends Activity {
 		btnSalvarDadosPaciente.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(DadosPacienteActivity.this,Apresentacao.class);
-				startActivity(intent);				
+				Intent intent = new Intent(DadosPacienteActivity.this,
+						Apresentacao.class);
+				startActivity(intent);
 			}
 		});
 

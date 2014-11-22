@@ -2,21 +2,19 @@ package com.example.testecognitivo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Linguagem3 extends Activity{
-	
+public class Linguagem3 extends Activity {
 
 	@Override
-	protected void onChildTitleChanged(Activity childActivity,
-			CharSequence title) {
+	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		super.onChildTitleChanged(childActivity, title);
+		super.onCreate(savedInstanceState);
 		
-		//inflar layout de linguagem 3
+		// inflar layout de linguagem 3
 		setContentView(R.layout.linguagem);
-
 	}
 
 }

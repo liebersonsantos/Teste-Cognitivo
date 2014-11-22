@@ -2,6 +2,7 @@ package com.example.testecognitivo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -11,18 +12,18 @@ public class Linguagem extends Activity{
 	 * @author tairo declaração de variaveis
 	 */
 	ImageButton imgBtnEnviarLinguagem;
+	
 	@Override
-	protected void onChildTitleChanged(Activity childActivity,
-			CharSequence title) {
+	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		super.onChildTitleChanged(childActivity, title);
-		
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.linguagem);
 
 		/**
 		 * Linka as variaveis java com xml
 		 */
-		imgBtnEnviarLinguagem = (ImageButton) findViewById(R.id.imgBtnEnviarLinguagem2);
+		imgBtnEnviarLinguagem = (ImageButton) findViewById(R.id.imgBtnEnviarLinguagem);
+		
 		imgBtnEnviarLinguagem.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

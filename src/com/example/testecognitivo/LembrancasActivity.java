@@ -28,8 +28,7 @@ public class LembrancasActivity extends Activity {
 				/**
 				 * @author tairo envia para a tela de liguagem
 				 */
-				Intent intent = new Intent(LembrancasActivity.this,
-						Linguagem.class);
+				Intent intent = new Intent(LembrancasActivity.this,Linguagem.class);
 				startActivity(intent);
 			}
 		});
