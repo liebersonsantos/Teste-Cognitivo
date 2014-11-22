@@ -30,6 +30,8 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/txtSenha"
         android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:inputType="textPassword" >
 
         <requestFocus />
@@ -43,7 +45,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/txtNome"
-        android:ems="10" />
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/txtSenha"

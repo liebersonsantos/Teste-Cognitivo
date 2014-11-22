@@ -59,7 +59,9 @@
         android:layout_alignBaseline="@+id/txtNomeMed"
         android:layout_alignBottom="@+id/txtNomeMed"
         android:layout_alignLeft="@+id/txtCadMed"
-        android:ems="10" >
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="textPersonName" >
 
         <requestFocus />
     </EditText>
@@ -80,7 +82,9 @@
         android:layout_alignBaseline="@+id/txtCrm"
         android:layout_alignBottom="@+id/txtCrm"
         android:layout_alignLeft="@+id/edtNomeMed"
-        android:ems="10" />
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/edtEspecialidadeMed"
@@ -89,7 +93,9 @@
         android:layout_alignBaseline="@+id/txtEspecialidade"
         android:layout_alignBottom="@+id/txtEspecialidade"
         android:layout_alignLeft="@+id/btnSalvarMed"
-        android:ems="10" />
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/edtLoginMed"
@@ -98,7 +104,9 @@
         android:layout_alignBaseline="@+id/txtLoginMed"
         android:layout_alignBottom="@+id/txtLoginMed"
         android:layout_alignLeft="@+id/edtEspecialidadeMed"
-        android:ems="10" />
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/edtSenhaMed"
@@ -107,7 +115,9 @@
         android:layout_alignBaseline="@+id/txtSenhaMed"
         android:layout_alignBottom="@+id/txtSenhaMed"
         android:layout_alignLeft="@+id/edtLoginMed"
-        android:ems="10" />
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="textPassword" />
 
     <TextView
         android:id="@+id/txtEspecialidade"

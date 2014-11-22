@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class TelaComandoActivity extends Activity{
 	
-	private Button btnComandoSeguir;
+	private Button btnTelaComandoSeguir;
 	
 	
 	@Override
@@ -22,16 +22,14 @@ public class TelaComandoActivity extends Activity{
 		 * Linka as variaveis java com xml
 		 */
 		
-		btnComandoSeguir = (Button) findViewById(R.id.btnComandoSeguir);
-		btnComandoSeguir.setOnClickListener(new View.OnClickListener() {
-			
+		btnTelaComandoSeguir = (Button) findViewById(R.id.btnTelaComandoSeguir);
+		btnTelaComandoSeguir.setOnClickListener(new View.OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				Intent intent = new Intent(TelaComandoActivity.this, Linguagem5.class);
-				startActivity(intent);
-				
+				Intent intent = new Intent(TelaComandoActivity.this,Linguagem5.class);
+				startActivity(intent);				
 			}
 		});
 		

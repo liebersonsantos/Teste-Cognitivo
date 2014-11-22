@@ -18,6 +18,7 @@ public class Linguagem5 extends Activity{
 		
 		setContentView(R.layout.linguagem5);
 		
+		btnSeguirLinguagem5 = (Button) findViewById(R.id.btnSeguirLinguagem5);		
 		btnSeguirLinguagem5.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
