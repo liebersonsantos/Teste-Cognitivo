@@ -414,8 +414,8 @@ int id imgbtnEmMundo 0x7f050052
 int id imgbtnEmes 0x7f05008d
 int id imgbtnEnMundo 0x7f050054
 int id imgbtnEnviarAtencaoTemp 0x7f050055
-int id imgbtnEnviarLembrancas 0x7f050071
 int id imgbtnEnviarLinguagem 0x7f050072
+int id imgbtnEnviarRegistro 0x7f050071
 int id imgbtnEoMundo 0x7f05004c
 int id imgbtnEtijoloLembranca 0x7f05006f
 int id imgbtnEuMundo 0x7f050053

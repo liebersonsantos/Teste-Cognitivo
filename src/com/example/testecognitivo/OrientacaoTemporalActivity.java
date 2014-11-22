@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class OrientacaoTemporalActivity extends Activity{
@@ -26,7 +25,8 @@ public class OrientacaoTemporalActivity extends Activity{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				Intent intent = new Intent();
+				Intent intent = new Intent(OrientacaoTemporalActivity.this, RegistroActivity.class);
+				startActivity(intent);
 				
 			}
 		});
