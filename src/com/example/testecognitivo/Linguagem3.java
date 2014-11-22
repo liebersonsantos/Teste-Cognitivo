@@ -8,7 +8,7 @@ import android.widget.ImageButton;
 
 public class Linguagem3 extends Activity {
 	
-	private ImageButton imgbtnSeguirLinguagem3;
+	ImageButton imgbtnSeguirLinguagem3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,7 @@ public class Linguagem3 extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		// inflar layout de linguagem 3
-		setContentView(R.layout.linguagem);
+		setContentView(R.layout.linguagem3);
 		
 		imgbtnSeguirLinguagem3 = (ImageButton) findViewById(R.id.imgbtnSeguirLinguagem3);
 		imgbtnSeguirLinguagem3.setOnClickListener(new View.OnClickListener() {
