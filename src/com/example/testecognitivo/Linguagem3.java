@@ -19,8 +19,7 @@ public class Linguagem3 extends Activity {
 		setContentView(R.layout.linguagem3);
 		
 		imgbtnSeguirLinguagem3 = (ImageButton) findViewById(R.id.imgbtnSeguirLinguagem3);
-		imgbtnSeguirLinguagem3.setOnClickListener(new View.OnClickListener() {
-			
+		imgbtnSeguirLinguagem3.setOnClickListener(new View.OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
