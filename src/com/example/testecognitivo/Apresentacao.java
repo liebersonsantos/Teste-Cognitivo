@@ -27,7 +27,7 @@ public class Apresentacao extends Activity {
 				Intent intent = new Intent(Apresentacao.this,
 						OrientacaoTemporalActivity.class);
 				startActivity(intent);
-
+//
 			}
 		});
 
