@@ -38,11 +38,23 @@
         </activity>
         <activity android:name=".Linguagem3" >
         </activity>
+        <activity android:name=".Linguagem4" >
+        </activity>
+        <activity android:name=".TelaComandoActivity">
+        </activity>
+        <activity android:name=".Linguagem5" >
+        </activity>
+        <activity android:name=".Linguagem6Activity" >
+        </activity>
+        <activity android:name=".Linguagem7" >
+        </activity>
         <activity android:name=".LocalizacaoActivity" >
         </activity>
         <activity android:name=".OrientacaoTemporalActivity" >
         </activity>
         <activity android:name=".RegistroActivity" >
+        </activity>
+        <activity android:name=".ResultadoActivity">
         </activity>
     </application>
 

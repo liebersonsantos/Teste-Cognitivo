@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Linguagem6 extends Activity{
+public class Linguagem6Activity extends Activity{
 	
 	Button btnSeguirLinguagem6;
 	
@@ -17,30 +17,25 @@ public class Linguagem6 extends Activity{
 		
 		setContentView(R.layout.linguagem6);
 		
+		/*
+		 * linka as variaveis java com xml
+		 */
+		
 		btnSeguirLinguagem6 = (Button) findViewById(R.id.btnSeguirLinguagem6);
 		btnSeguirLinguagem6.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				/**
-				 * envia para tela resultado
-				 */
 				
-				Intent intent = new Intent(Linguagem6.this, ResultadoActivity.class);
+				
+				Intent intent = new Intent(Linguagem6Activity.this, Linguagem7.class);
 				startActivity(intent);
-				
-				
 			}
 		});
 		
-		
-		
-	}
-		
-		
 	}
 	
 	
 
-
+}

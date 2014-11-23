@@ -126,4 +126,13 @@
         android:layout_toRightOf="@+id/textView3"
         android:ems="10" />
 
+    <Button
+        android:id="@+id/btnCalcule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Calcule" />
+
 </RelativeLayout>

@@ -18,13 +18,14 @@ public class Linguagem5 extends Activity{
 		
 		setContentView(R.layout.linguagem5);
 		
+		btnSeguirLinguagem5 = (Button) findViewById(R.id.btnSeguirLinguagem5);
 		btnSeguirLinguagem5.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				Intent intent = new Intent(Linguagem5.this, Linguagem6.class);
+				Intent intent = new Intent(Linguagem5.this, Linguagem6Activity.class);
 				startActivity(intent);
 				
 			}
