@@ -50,7 +50,7 @@
             android:layout_below="@+id/textView2"
             android:layout_marginTop="42dp"
             android:text="2.1 - Em qual local estamos ?"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView4"
@@ -60,7 +60,7 @@
             android:layout_below="@+id/btnErradoLocalizacao"
             android:layout_marginTop="23dp"
             android:text="2.2 - Qual o nome da instituição ?"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnErradoInstituicao"
@@ -87,7 +87,7 @@
             android:layout_below="@+id/btnCertoInstituicao"
             android:layout_marginTop="21dp"
             android:text="2.3 - Qual o bairro ?"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnErradoBairro"
@@ -114,7 +114,7 @@
             android:layout_below="@+id/btnCertoBairro"
             android:layout_marginTop="17dp"
             android:text="2.4 - Qual a cidade ?"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnErradoCidade"
@@ -141,7 +141,7 @@
             android:layout_below="@+id/btnErradoCidade"
             android:layout_marginTop="28dp"
             android:text="2.5 - Qual estado ?"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnErradoEstado"

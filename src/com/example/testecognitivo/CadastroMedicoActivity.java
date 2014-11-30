@@ -48,26 +48,39 @@ public class CadastroMedicoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				// Atribui os dados do Xml par o objeto, para que
-				// posso ser armazenado na base de dados
-				medico.setNome(edtNomeMed.getText().toString());
-				medico.setCrm(edtCrmMed.getText().toString());
-				medico.setEspecialidade(edtEspecialidadeMed.getText().toString());
-				medico.setLogin(edtLoginMed.getText().toString());
-				medico.setSenha(edtSenhaMed.getText().toString());
-				
-				MedicoDAO medicoDAO = new MedicoDAO(CadastroMedicoActivity.this);
-				medicoDAO.inserir(medico);
-				Toast.makeText(CadastroMedicoActivity.this,"Médico salvo com sucesso..!!", Toast.LENGTH_SHORT).show();
+				//Verifica s etodos os dados foram preenchidos 
+				//Se os dados estiverem vazios é mostrada a mensagem
+				if (edtNomeMed.getText().toString().equals("") ||
+					edtCrmMed.getText().toString().equals("") ||
+					edtEspecialidadeMed.getText().toString().equals("") ||
+					edtLoginMed.getText().toString().equals("") ||
+					edtSenhaMed.getText().toString().equals("")) {
+					
+					Toast.makeText(CadastroMedicoActivity.this,"Por favor preencha todos os dados.", Toast.LENGTH_LONG).show();
+					
+				}else{
+					
+					// Atribui os dados do Xml par o objeto, para que
+					// posso ser armazenado na base de dados
+					medico.setNome(edtNomeMed.getText().toString());
+					medico.setCrm(edtCrmMed.getText().toString());
+					medico.setEspecialidade(edtEspecialidadeMed.getText().toString());
+					medico.setLogin(edtLoginMed.getText().toString());
+					medico.setSenha(edtSenhaMed.getText().toString());
+					
+					MedicoDAO medicoDAO = new MedicoDAO(CadastroMedicoActivity.this);
+					medicoDAO.inserir(medico);
+					Toast.makeText(CadastroMedicoActivity.this,"Médico salvo com sucesso..!!", Toast.LENGTH_SHORT).show();
 
-				/**
-				 * criando o objeto intent para redirecionamento para a tela de
-				 * login
-				 */
-				Intent intent = new Intent(CadastroMedicoActivity.this,
-						LoginActivity.class);
+					/**
+					 * criando o objeto intent para redirecionamento para a tela
+					 * de login
+					 */
+					Intent intent = new Intent(CadastroMedicoActivity.this,
+					LoginActivity.class);
 
-				startActivity(intent);
+					startActivity(intent);
+				}
 
 			}
 		});

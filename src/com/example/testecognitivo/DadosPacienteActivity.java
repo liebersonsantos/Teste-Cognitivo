@@ -24,7 +24,7 @@ public class DadosPacienteActivity extends Activity {
 	private RadioGroup rdgSexo;
 	private Button btnSalvarDadosPaciente;
 	private Spinner spinnerEscolaridade;
-	private String[] ecolaridade = new String[] { "Ensino infantil",
+	private String[] ecolaridade = new String[] { "Selecione","Ensino infantil",
 			"Ensino fundamental", "Ensino médio", "Ensino superior" };
 	
 	//Declaração de paciente para a realização do teste
@@ -69,36 +69,53 @@ public class DadosPacienteActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				//Verifica o sexo selecionado
-				String sexo = "";
-				if (rdFeminino.isChecked()) {
-					sexo = "Feminino";
+				//verifica se campos estão preenchidos 
+				//se não estiverem vazios dispara a mensagem
+				if (edtNomePaciente.getText().toString().equals("") || 
+					edtDataNacPaciente.getText().toString().equals("")|| 
+					spinnerEscolaridade.getSelectedItem().toString().equals("Selecione")||
+					edtNaturalidadePaciente.getText().toString().equals("") ||
+					edtNacionalidadePaciente.getText().toString().equals("")
+					){
+					
+					Toast.makeText(DadosPacienteActivity.this, "Por favor insira todos os dados.",Toast.LENGTH_LONG).show();
+				
 				}else{
-					sexo = "Masculino";
-				}
-				
-				//Atribui os dados do Xml par o objeto, para que 
-				//posso ser armazenado na base de dados
-				paciente.setNome(edtNomePaciente.getText().toString());
-				paciente.setSexo(sexo);
-				paciente.setDataNasc(edtDataNacPaciente.getText().toString());
-				paciente.setEscolaridade(spinnerEscolaridade.getSelectedItem().toString());
-				paciente.setNaturalidade(edtNaturalidadePaciente.getText().toString());
-				paciente.setNacionalidade(edtNacionalidadePaciente.getText().toString());
-				PacienteDAO pacienteDAO = new PacienteDAO(DadosPacienteActivity.this);
-				pacienteDAO.inserir(paciente);
-				Toast.makeText(DadosPacienteActivity.this, "Paciente salvo com sucesso..!!",Toast.LENGTH_SHORT).show();
-				
-				
-				Intent intent = new Intent(DadosPacienteActivity.this,
-						Apresentacao.class);
-				startActivity(intent);
-				
+					//Verifica o sexo selecionado
+					String sexo = "";
+					if (rdFeminino.isChecked()) {
+						sexo = "Feminino";
+					}else{
+						sexo = "Masculino";
+					}
+					
+					//Atribui os dados do Xml par o objeto, para que 
+					//possa ser armazenado na base de dados
+					paciente.setNome(edtNomePaciente.getText().toString());
+					paciente.setSexo(sexo);
+					paciente.setDataNasc(edtDataNacPaciente.getText().toString());
+					paciente.setEscolaridade(spinnerEscolaridade.getSelectedItem().toString());
+					paciente.setNaturalidade(edtNaturalidadePaciente.getText().toString());
+					paciente.setNacionalidade(edtNacionalidadePaciente.getText().toString());
+					
+					//armazena os dados na base
+					PacienteDAO pacienteDAO = new PacienteDAO(DadosPacienteActivity.this);
+					pacienteDAO.inserir(paciente);
+					
+					//mostra a mensagem
+					Toast.makeText(DadosPacienteActivity.this, "Paciente salvo com sucesso..!!",Toast.LENGTH_SHORT).show();
+					
+					//Vai para proxima tela
+					Intent intent = new Intent(DadosPacienteActivity.this,
+							Apresentacao.class);
+					startActivity(intent);
+				}				
 			}
 		});	
 		
 	}
 	
+	// chama a Lista de pacientes cadastrados
 	public void listarPacientes( View view) {
 		Intent intent = new Intent(DadosPacienteActivity.this,ListaPaciente.class);
 		startActivity(intent);
