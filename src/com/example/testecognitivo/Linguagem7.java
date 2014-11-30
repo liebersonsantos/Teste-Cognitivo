@@ -27,9 +27,15 @@ public class Linguagem7 extends Activity{
 				 * envia para tela resultado
 				 */
 				
-				Intent intent = new Intent(Linguagem7.this, ResultadoActivity.class);
-				startActivity(intent);
+				//pega o "id" do paciente e o "id" do medico que veio de outra tela
+				//aqui tem que modifica pegar o id, com uma intent de outra tela
+				long id_paciente = 1;
+				long id_medico = 1;
 				
+				Intent intent = new Intent(Linguagem7.this, ResultadoActivity.class);
+				intent.putExtra("id_paciente", id_paciente);
+				intent.putExtra("id_medico", id_medico);
+				startActivity(intent);			
 				
 			}
 		});

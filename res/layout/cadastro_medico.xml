@@ -7,35 +7,6 @@
     android:orientation="horizontal" >
 
     <TextView
-        android:id="@+id/txtCadMed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        android:gravity="center"
-        android:text="Cadastro do Médico" />
-
-    <TextView
-        android:id="@+id/txtNomeMed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/txtCadMed"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="22dp"
-        android:text="Nome" />
-
-    <TextView
-        android:id="@+id/txtCrm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtNomeMed"
-        android:layout_below="@+id/txtNomeMed"
-        android:layout_marginTop="27dp"
-        android:text="CRM" />
-
-    <TextView
         android:id="@+id/txtLoginMed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,48 +15,42 @@
         android:layout_marginTop="38dp"
         android:text="Login" />
 
-    <TextView
-        android:id="@+id/txtSenhaMed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtLoginMed"
-        android:layout_below="@+id/txtLoginMed"
-        android:layout_marginTop="37dp"
-        android:text="Senha" />
-
-    <EditText
-        android:id="@+id/edtNomeMed"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtNomeMed"
-        android:layout_alignBottom="@+id/txtNomeMed"
-        android:layout_alignLeft="@+id/txtCadMed"
-        android:layout_alignParentRight="true"
-        android:ems="10"
-        android:inputType="textPersonName" >
-
-        <requestFocus />
-    </EditText>
-
     <EditText
         android:id="@+id/edtCrmMed"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/txtCrm"
         android:layout_alignBottom="@+id/txtCrm"
-        android:layout_alignLeft="@+id/edtNomeMed"
+        android:layout_alignLeft="@+id/edtNomeMedico"
         android:layout_alignParentRight="true"
         android:ems="10"
         android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnSalvarMed"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Salvar" />
+
+    <TextView
+        android:id="@+id/txtCadMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Cadastro do Médico" />
 
     <EditText
         android:id="@+id/edtEspecialidadeMed"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtEspecialidade"
-        android:layout_alignBottom="@+id/txtEspecialidade"
-        android:layout_alignLeft="@+id/btnSalvarMed"
+        android:layout_alignLeft="@+id/edtCrmMed"
         android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txtEspecialidade"
         android:ems="10"
         android:inputType="textPersonName" />
 
@@ -104,10 +69,9 @@
         android:id="@+id/edtSenhaMed"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtSenhaMed"
-        android:layout_alignBottom="@+id/txtSenhaMed"
         android:layout_alignLeft="@+id/edtLoginMed"
         android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txtSenhaMed"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -115,18 +79,46 @@
         android:id="@+id/txtEspecialidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtCrm"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/edtCrmMed"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="27dp"
         android:text="Especialidade" />
 
-    <Button
-        android:id="@+id/btnSalvarMed"
+    <TextView
+        android:id="@+id/txtCrm"
         android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtLoginMed"
+        android:layout_below="@+id/edtNomeMedico"
+        android:layout_marginTop="18dp"
+        android:text="CRM" />
+
+    <TextView
+        android:id="@+id/txtNomeMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtSenhaMed"
+        android:layout_below="@+id/txtCadMed"
+        android:layout_marginTop="67dp"
+        android:text="Nome" />
+
+    <EditText
+        android:id="@+id/edtNomeMedico"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="Salvar" />
+        android:layout_alignTop="@+id/txtNomeMed"
+        android:layout_toRightOf="@+id/txtEspecialidade"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtSenhaMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtCrm"
+        android:layout_below="@+id/edtLoginMed"
+        android:layout_marginTop="22dp"
+        android:text="Senha" />
 
 </RelativeLayout>

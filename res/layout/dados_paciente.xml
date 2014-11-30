@@ -123,7 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/edtNaturalidadePaciente"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/spinnerEscolaridade"
             android:text="Salvar" />
 
         <TextView
@@ -162,6 +162,15 @@
             android:ems="10"
             android:inputType="date"
             android:maxLength="10" />
+
+        <Button
+            android:id="@+id/btnListarPacientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Listar pacientes" 
+            android:onClick="listarPacientes"/>
 
     </RelativeLayout>
 

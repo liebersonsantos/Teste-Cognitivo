@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class DadosPacienteActivity extends Activity {
 
@@ -25,7 +26,10 @@ public class DadosPacienteActivity extends Activity {
 	private Spinner spinnerEscolaridade;
 	private String[] ecolaridade = new String[] { "Ensino infantil",
 			"Ensino fundamental", "Ensino médio", "Ensino superior" };
-
+	
+	//Declaração de paciente para a realização do teste
+	Paciente paciente = new Paciente();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -64,11 +68,39 @@ public class DadosPacienteActivity extends Activity {
 		btnSalvarDadosPaciente.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				
+				//Verifica o sexo selecionado
+				String sexo = "";
+				if (rdFeminino.isChecked()) {
+					sexo = "Feminino";
+				}else{
+					sexo = "Masculino";
+				}
+				
+				//Atribui os dados do Xml par o objeto, para que 
+				//posso ser armazenado na base de dados
+				paciente.setNome(edtNomePaciente.getText().toString());
+				paciente.setSexo(sexo);
+				paciente.setDataNasc(edtDataNacPaciente.getText().toString());
+				paciente.setEscolaridade(spinnerEscolaridade.getSelectedItem().toString());
+				paciente.setNaturalidade(edtNaturalidadePaciente.getText().toString());
+				paciente.setNacionalidade(edtNacionalidadePaciente.getText().toString());
+				PacienteDAO pacienteDAO = new PacienteDAO(DadosPacienteActivity.this);
+				pacienteDAO.inserir(paciente);
+				Toast.makeText(DadosPacienteActivity.this, "Paciente salvo com sucesso..!!",Toast.LENGTH_SHORT).show();
+				
+				
 				Intent intent = new Intent(DadosPacienteActivity.this,
 						Apresentacao.class);
 				startActivity(intent);
+				
 			}
-		});
-
+		});	
+		
+	}
+	
+	public void listarPacientes( View view) {
+		Intent intent = new Intent(DadosPacienteActivity.this,ListaPaciente.class);
+		startActivity(intent);
 	}
 }
