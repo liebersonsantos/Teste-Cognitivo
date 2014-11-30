@@ -6,17 +6,6 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
-        android:gravity="center"
-        android:text="Faça o paciente escrever uma frase de sua autoria. A frase deve conter um sujeito, um objeto e fazer sentido. Ignore os erros de ortografia ao marcar o ponto."
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,34 +15,47 @@
         android:text="Linguagem V"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <ImageButton
-        android:id="@+id/imgbtnVLinguagem5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginRight="44dp"
-        android:layout_marginTop="116dp"
-        android:background="@drawable/ic_launcher_certo"
-        android:src="@drawable/abc_ab_share_pack_holo_dark" />
-
-    <ImageButton
-        android:id="@+id/imgbtnELinguaguem5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignTop="@+id/imgbtnVLinguagem5"
-        android:layout_marginLeft="48dp"
-        android:background="@drawable/btnerrado"
-        android:src="@drawable/abc_ab_share_pack_holo_dark" />
-
     <Button
         android:id="@+id/btnSeguirLinguagem5"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imgbtnVLinguagem5"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/proximo"
+        android:text="Seguir" />
+
+    <ImageButton
+        android:id="@+id/imgbtnELinguaguem5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignTop="@+id/imgbtnVLinguagem5"
+        android:background="@drawable/btnerrado"
+        android:src="@drawable/abc_ab_share_pack_holo_dark" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVLinguagem5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnSeguirLinguagem5"
+        android:layout_marginBottom="96dp"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/imgbtnELinguaguem5"
+        android:background="@drawable/ic_launcher_certo"
+        android:src="@drawable/abc_ab_share_pack_holo_dark" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imgbtnELinguaguem5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:text="Seguir" />
+        android:layout_marginBottom="91dp"
+        android:gravity="center"
+        android:text="Faça o paciente escrever uma frase de sua autoria. A frase deve conter um sujeito, um objeto e fazer sentido. Ignore os erros de ortografia ao marcar o ponto."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20sp" />
 
 </RelativeLayout>

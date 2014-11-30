@@ -12,49 +12,57 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
-        android:text="Linguagem II" />
+        android:text="Linguagem II"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/imgBtnEnviarLinguagem2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="@drawable/ic_action_send_now"
+        android:scaleType="fitXY"
+        android:src="@drawable/proximo" />
+
+    <ImageButton
+        android:id="@+id/imgbtnElinguagem"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignTop="@+id/imgbtnVlinguagem"
+        android:scaleType="center"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVlinguagem"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/imgBtnEnviarLinguagem2"
+        android:layout_marginBottom="135dp"
+        android:layout_toLeftOf="@+id/imgBtnEnviarLinguagem2"
+        android:scaleType="center"
+        android:src="@drawable/ic_launcher_certo" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_above="@+id/imgbtnElinguagem"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Faça o paciente repetir..." />
+        android:layout_marginBottom="68dp"
+        android:text="Faça o paciente repetir..."
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_above="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:text="&quot;...Nem aqui, nem alí, nem lá...&quot;" />
-
-    <ImageButton
-        android:id="@+id/imgBtnEnviarLinguagem2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/textView1"
-        android:background="@drawable/ic_action_send_now" />
-
-    <ImageButton
-        android:id="@+id/imgbtnElinguagem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_launcher" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVlinguagem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imgBtnEnviarLinguagem2"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_launcher_certo" />
+        android:layout_marginBottom="22dp"
+        android:text="&quot;...Nem aqui, nem alí, nem lá...&quot;"
+        android:textSize="20sp" />
 
 </RelativeLayout>

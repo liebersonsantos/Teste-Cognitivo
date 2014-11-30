@@ -18,76 +18,84 @@
         android:id="@+id/textView2"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Mencione três palavras levando 1 segundo para cada uma. Peça ao paciente para repetir as três palavras que voê mencionou. Estabeleça 1 ponto para cada palavra certa." />
+        android:text="Mencione três palavras levando 1 segundo para cada uma. Peça ao paciente para repetir as três palavras que voê mencionou. Estabeleça 1 ponto para cada palavra certa."
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:text="VASO               CARRO               TIJOLO" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVRegVaso"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
-        android:layout_marginLeft="16dp"
-        android:src="@android:drawable/btn_star" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVRegCarro"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_alignTop="@+id/imgbtnERegCarro"
-        android:src="@android:drawable/btn_star" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVLinguagem"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignTop="@+id/imgbtnVRegVaso"
-        android:src="@android:drawable/btn_star" />
-
-    <ImageButton
-        android:id="@+id/imgbtnERegCarro"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignTop="@+id/imgbtnVRegVaso"
-        android:layout_toLeftOf="@+id/imgbtnVRegCarro"
-        android:src="@android:drawable/btn_star" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVRegTijolo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignTop="@+id/imgbtnVRegCarro"
-        android:src="@android:drawable/btn_star" />
-
-    <ImageButton
-        android:id="@+id/imgbtnERegTijolo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignTop="@+id/imgbtnVRegTijolo"
-        android:layout_toLeftOf="@+id/imgbtnVRegTijolo"
-        android:src="@android:drawable/btn_star" />
+        android:gravity="center_horizontal"
+        android:text="VASO           CARRO          TIJOLO"
+        android:textSize="20sp" />
 
     <ImageButton
         android:id="@+id/imgBtnEnviarLembrancas"
-        android:layout_width="120dp"
-        android:layout_height="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/imgbtnVRegCarro"
-        android:src="@android:drawable/btn_star" />
+        android:scaleType="fitXY"
+        android:src="@drawable/proximo" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVRegTijolo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imgbtnVRegCarro"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_launcher_certo" />
+
+    <ImageButton
+        android:id="@+id/imgbtnERegTijolo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgbtnVRegTijolo"
+        android:layout_toLeftOf="@+id/imgbtnVRegTijolo"
+        android:src="@drawable/btnerrado" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVRegCarro"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgbtnERegCarro"
+        android:layout_marginRight="23dp"
+        android:layout_toLeftOf="@+id/imgbtnERegTijolo"
+        android:src="@drawable/ic_launcher_certo" />
+
+    <ImageButton
+        android:id="@+id/imgbtnERegCarro"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgbtnVLinguagem"
+        android:layout_toLeftOf="@+id/imgbtnVRegCarro"
+        android:src="@drawable/btnerrado" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVRegVaso"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginLeft="22dp"
+        android:src="@drawable/btnerrado" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVLinguagem"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgbtnVRegVaso"
+        android:layout_toRightOf="@+id/imgbtnVRegVaso"
+        android:src="@drawable/ic_launcher_certo" />
 
 </RelativeLayout>

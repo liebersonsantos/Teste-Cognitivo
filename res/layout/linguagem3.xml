@@ -14,29 +14,20 @@
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="Linguagem III"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="Faça o paciente seguir o comando de três estágios." />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView2"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="38dp"
-        android:gravity="center"
-        android:text="Pegue a folha de papel."
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="Faça o paciente seguir o comando de três estágios."
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -45,7 +36,7 @@
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3"
         android:layout_marginTop="18dp"
-        android:text="Dobre o a folha de papel ao meio."
+        android:text="2 - Dobre o a folha de papel ao meio."
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -55,37 +46,47 @@
         android:layout_alignLeft="@+id/textView4"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="20dp"
-        android:text="Coloque o papel em cima da mesa."
+        android:text="3 - Coloque o papel em cima da mesa."
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <ImageButton
+        android:id="@+id/imgbtnSeguirLinguagem3"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/proximo" />
+
+    <ImageButton
         android:id="@+id/imgbtnVlinguagem3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imgbtnSeguirLinguagem3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignRight="@+id/textView1"
         android:layout_alignTop="@+id/imgbtnElinguagem3"
         android:background="@drawable/ic_launcher_certo"
         android:src="@drawable/ic_launcher_certo" />
 
-    <ImageButton
-        android:id="@+id/imgbtnElinguagem3"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView5"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btnerrado"
-        android:src="@drawable/btnerrado" />
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="1 - Pegue a folha de papel."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <ImageButton
-        android:id="@+id/imgbtnSeguirLinguagem3"
-        android:layout_width="100dp"
-        android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_marginBottom="22dp"
-        android:background="@drawable/btnseguir"
-        android:src="@drawable/abc_ab_share_pack_holo_dark" />
+        android:id="@+id/imgbtnElinguagem3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView5"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="85dp"
+        android:layout_toLeftOf="@+id/imgbtnVlinguagem3"
+        android:background="@drawable/btnerrado"
+        android:src="@drawable/btnerrado" />
 
 </RelativeLayout>

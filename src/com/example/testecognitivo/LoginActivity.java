@@ -45,7 +45,7 @@ public class LoginActivity extends Activity {
 				 * Verificação de login 
 				 * se ususario for valido ira para tela de dados d paciente
 				 */
-				if ((edtNome.getText().toString().equals("Lieberson")) && (edtSenha.getText().toString().equals(""))) {					
+				if ((edtNome.getText().toString().equals("")) && (edtSenha.getText().toString().equals(""))) {					
 					
 					/**
 					 * @author tairo

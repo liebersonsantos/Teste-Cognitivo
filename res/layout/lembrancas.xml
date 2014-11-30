@@ -32,7 +32,8 @@
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="60dp"
-        android:text="VASO" />
+        android:text="VASO"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -41,7 +42,8 @@
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3"
         android:layout_marginTop="26dp"
-        android:text="CARRO" />
+        android:text="CARRO"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -50,62 +52,68 @@
         android:layout_alignLeft="@+id/textView4"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="33dp"
-        android:text="TIJOLO" />
+        android:text="TIJOLO"
+        android:textSize="30sp" />
 
     <ImageButton
         android:id="@+id/imgbtnVLinguagem"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_above="@+id/textView4"
         android:layout_centerHorizontal="true"
-        android:src="@android:drawable/btn_star" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVvasoLembranca"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_above="@+id/textView4"
-        android:layout_toRightOf="@+id/textView1"
-        android:src="@android:drawable/btn_star" />
+        android:background="@drawable/btnerrado"
+        android:scaleType="fitXY"
+        android:src="@drawable/btnerrado" />
 
     <ImageButton
         android:id="@+id/imgbtnEcarroLembranca"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_above="@+id/textView5"
         android:layout_alignLeft="@+id/imgbtnVLinguagem"
-        android:src="@android:drawable/btn_star" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVcarroLembranca"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_above="@+id/textView5"
-        android:layout_toRightOf="@+id/textView1"
-        android:src="@android:drawable/btn_star" />
+        android:src="@drawable/btnerrado" />
 
     <ImageButton
         android:id="@+id/imgbtnEtijoloLembranca"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignBottom="@+id/textView5"
         android:layout_alignLeft="@+id/imgbtnEcarroLembranca"
-        android:src="@android:drawable/btn_star" />
+        android:src="@drawable/btnerrado" />
 
     <ImageButton
         android:id="@+id/imgbtnVtijoloLembranca"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignLeft="@+id/imgbtnVcarroLembranca"
         android:layout_alignTop="@+id/imgbtnEtijoloLembranca"
-        android:src="@android:drawable/btn_star" />
+        android:src="@drawable/ic_launcher_certo" />
 
     <ImageButton
         android:id="@+id/imgBtnEnviarLembrancas"
         android:layout_width="120dp"
-        android:layout_height="55dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/imgbtnVtijoloLembranca"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/textView1"
-        android:src="@android:drawable/btn_star" />
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/proximo" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVvasoLembranca"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgbtnVLinguagem"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/imgbtnVLinguagem"
+        android:src="@drawable/ic_launcher_certo" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVcarroLembranca"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imgbtnVvasoLembranca"
+        android:layout_alignTop="@+id/imgbtnEcarroLembranca"
+        android:src="@drawable/ic_launcher_certo" />
 
 </RelativeLayout>

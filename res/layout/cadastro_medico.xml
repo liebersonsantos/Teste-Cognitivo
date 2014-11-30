@@ -3,6 +3,7 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="horizontal" >
 
     <TextView
@@ -66,15 +67,6 @@
         <requestFocus />
     </EditText>
 
-    <Button
-        android:id="@+id/btnSalvarMed"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="34dp"
-        android:text="Salvar" />
-
     <EditText
         android:id="@+id/edtCrmMed"
         android:layout_width="120dp"
@@ -127,5 +119,14 @@
         android:layout_below="@+id/edtCrmMed"
         android:layout_marginTop="24dp"
         android:text="Especialidade" />
+
+    <Button
+        android:id="@+id/btnSalvarMed"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Salvar" />
 
 </RelativeLayout>

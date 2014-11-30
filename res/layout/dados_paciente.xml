@@ -6,7 +6,8 @@
     <RelativeLayout
         android:id="@+id/RelativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="494dp"
+        android:layout_height="550dp"
+        android:layout_margin="10dp"
         android:orientation="vertical" >
 
         <EditText
@@ -16,6 +17,7 @@
             android:layout_alignLeft="@+id/textView1"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/textView1"
+            android:layout_marginBottom="5dp"
             android:ems="10"
             android:inputType="textPersonName" >
 
@@ -29,7 +31,8 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/textView3"
             android:layout_marginTop="16dp"
-            android:text="Data nascimento" />
+            android:text="Data nascimento"
+            android:textSize="20sp" />
 
         <RadioGroup
             android:id="@+id/rdgSexo"
@@ -59,9 +62,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/textView3"
-            android:layout_marginTop="48dp"
-            android:text="Nome" />
+            android:layout_marginTop="60dp"
+            android:text="Nome"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView4"
@@ -70,10 +73,11 @@
             android:layout_alignLeft="@+id/textView1"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
+            android:layout_margin="20dp"
             android:layout_marginTop="19dp"
             android:gravity="center_horizontal"
             android:text="Dados do paciente"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -100,7 +104,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/edtNaturalidadePaciente"
-            android:text="Nacionalidade" />
+            android:text="Nacionalidade"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/edtNacionalidadePaciente"
@@ -121,21 +126,21 @@
             android:layout_alignParentRight="true"
             android:text="Salvar" />
 
-        <Spinner
-            android:id="@+id/spinnerEscolaridade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/textView5"
-            android:layout_toRightOf="@+id/textView5" />
-
-        <EditText
-            android:id="@+id/edtDataNascPaciente"
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView2"
-            android:ems="10"
-            android:inputType="date" />
+            android:layout_below="@+id/spinnerEscolaridade"
+            android:text="Naturalidade"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinnerEscolaridade"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_toRightOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView5"
@@ -143,15 +148,20 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/edtDataNascPaciente"
-            android:text="Escolaridade" />
+            android:layout_marginTop="25dp"
+            android:text="Escolaridade"
+            android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/textView6"
+        <EditText
+            android:id="@+id/edtDataNascPaciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/spinnerEscolaridade"
-            android:text="Naturalidade" />
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="17dp"
+            android:ems="10"
+            android:inputType="date"
+            android:maxLength="10" />
 
     </RelativeLayout>
 
