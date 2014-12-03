@@ -21,7 +21,7 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:gravity="center" 
+        android:gravity="center"
         android:text="Pergunte pausadamente ao paciente cada questão. A cada resposta certa somar-se-á 1 ponto." />
 
     <TextView
@@ -32,133 +32,100 @@
         android:layout_below="@+id/textView7"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="22dp"
-        android:layout_toLeftOf="@+id/imgbtnEdiaSemana"
         android:text="Qual o dia da semana?" />
 
     <ImageButton
         android:id="@+id/imgbtnEnviarAtencaoCalculo"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_alignLeft="@+id/imgbtnEhora"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
         android:src="@drawable/proximo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVdiaMes"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/imgbtnVdiaSemana"
-        android:layout_alignTop="@+id/imgbtnEdiaMes"
-        android:src="@drawable/ic_launcher_certo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVano"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/imgbtnVmes"
-        android:layout_below="@+id/imgbtnEmes"
-        android:src="@drawable/ic_launcher_certo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnEano"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignTop="@+id/imgbtnVano"
-        android:layout_toLeftOf="@+id/imgbtnVhora"
-        android:src="@drawable/btnerrado" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="41dp"
-        android:layout_toLeftOf="@+id/imgbtnEdiaSemana"
         android:text="Qual o dia de mês?" />
+	    
+	    <ToggleButton
+	        android:id="@+id/tgHora"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textView6"
+	        android:layout_alignBottom="@+id/textView6"
+	        android:layout_toRightOf="@+id/textView1"
+	        android:textOff="Errado"
+	        android:textOn="Certo" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="37dp"
-        android:layout_toLeftOf="@+id/imgbtnEdiaMes"
-        android:text="Em que ano estamos?" />
+	    <ToggleButton
+	        android:id="@+id/tgDiaSemana"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textView2"
+	        android:layout_alignBottom="@+id/textView2"
+	        android:layout_toRightOf="@+id/textView1"
+	        android:textOff="Errado"
+	        android:textOn="Certo" />
 
-    <ImageButton
-        android:id="@+id/imgbtnVmes"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/imgbtnVano"
-        android:layout_alignLeft="@+id/imgbtnVdiaMes"
-        android:src="@drawable/ic_launcher_certo" />
+	    <ToggleButton
+	        android:id="@+id/tgAno"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textView5"
+	        android:layout_alignBottom="@+id/textView5"
+	        android:layout_toRightOf="@+id/textView1"
+	        android:textOff="Errado"
+	        android:textOn="Certo" />
 
-    <ImageButton
-        android:id="@+id/imgbtnEhora"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/imgbtnVano"
-        android:layout_toLeftOf="@+id/imgbtnVhora"
-        android:src="@drawable/btnerrado" />
+	    <TextView
+	        android:id="@+id/textView5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignRight="@+id/textView4"
+	        android:layout_below="@+id/tgMes"
+	        android:layout_marginTop="30dp"
+	        android:text="Em que ano estamos?" />
 
-    <ImageButton
-        android:id="@+id/imgbtnVhora"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/imgbtnVano"
-        android:layout_alignTop="@+id/imgbtnEhora"
-        android:src="@drawable/ic_launcher_certo" />
+	    <ToggleButton
+	        android:id="@+id/tgDiaMes"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textView3"
+	        android:layout_alignBottom="@+id/textView3"
+	        android:layout_alignLeft="@+id/tgDiaSemana"
+	        android:textOff="Errado"
+	        android:textOn="Certo" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imgbtnEhora"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_marginBottom="15dp"
-        android:text="Qual a hora aproximada?" />
+	    <ToggleButton
+	        android:id="@+id/tgMes"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textView4"
+	        android:layout_alignBottom="@+id/textView4"
+	        android:layout_alignLeft="@+id/tgAno"
+	        android:textOff="Errado"
+	        android:textOn="Certo" />
 
-    <ImageButton
-        android:id="@+id/imgbtnEdiaSemana"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_toLeftOf="@+id/imgbtnVdiaSemana"
-        android:src="@drawable/btnerrado" />
+	    <TextView
+	        android:id="@+id/textView4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textView3"
+	        android:layout_centerVertical="true"
+	        android:text="Em que mês estamos?" />
 
-    <ImageButton
-        android:id="@+id/imgbtnVdiaSemana"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignRight="@+id/textView7"
-        android:layout_alignTop="@+id/imgbtnEdiaSemana"
-        android:src="@drawable/ic_launcher_certo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnEdiaMes"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignTop="@+id/textView3"
-        android:layout_toLeftOf="@+id/imgbtnVdiaMes"
-        android:src="@drawable/btnerrado" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/imgbtnEdiaMes"
-        android:text="Em que mês estamos?" />
-
-    <ImageButton
-        android:id="@+id/imgbtnEmes"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignTop="@+id/textView4"
-        android:layout_toRightOf="@+id/textView5"
-        android:src="@drawable/btnerrado" />
-
+	    <TextView
+	        android:id="@+id/textView6"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textView5"
+	        android:layout_below="@+id/tgAno"
+	        android:layout_marginTop="36dp"
+	        android:text="Qual a hora aproximada?" />
+    	
 </RelativeLayout>
