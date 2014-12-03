@@ -42,6 +42,7 @@ public class LocalizacaoActivity extends Activity{
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked){
 					pontos = pontos +1; Toast.makeText(LocalizacaoActivity.this, String.valueOf(pontos), Toast.LENGTH_SHORT).show();
+					tgLocal.setEnabled(false);
 				}
 				
 			}
@@ -54,6 +55,7 @@ public class LocalizacaoActivity extends Activity{
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked){
 					pontos = pontos +1; Toast.makeText(LocalizacaoActivity.this, String.valueOf(pontos), Toast.LENGTH_SHORT).show();
+					tgInstituicao.setEnabled(false);
 				}
 				
 			}
@@ -66,6 +68,7 @@ public class LocalizacaoActivity extends Activity{
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked){
 					pontos = pontos +1; Toast.makeText(LocalizacaoActivity.this, String.valueOf(pontos), Toast.LENGTH_SHORT).show();
+					tgBairro.setEnabled(false);
 				}
 				
 			}
@@ -78,6 +81,7 @@ public class LocalizacaoActivity extends Activity{
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked){
 					pontos = pontos +1; Toast.makeText(LocalizacaoActivity.this, String.valueOf(pontos), Toast.LENGTH_SHORT).show();
+					tgCidade.setEnabled(false);
 				}
 				
 			}
@@ -90,6 +94,7 @@ public class LocalizacaoActivity extends Activity{
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked){
 					pontos = pontos +1; Toast.makeText(LocalizacaoActivity.this, String.valueOf(pontos), Toast.LENGTH_SHORT).show();
+					tgEstado.setEnabled(false);
 				}
 				
 			}
@@ -102,6 +107,7 @@ public class LocalizacaoActivity extends Activity{
 			public void onClick(View v) {
 				// Chama a proxima activity				
 				Intent intent = new Intent(LocalizacaoActivity.this, RegistroActivity.class);
+				
 				//passa para a prixima activity o valor da pontuação
 				intent.putExtra("pontos", pontos);
 				startActivity(intent);
