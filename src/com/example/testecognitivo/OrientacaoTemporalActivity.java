@@ -35,7 +35,7 @@ public class OrientacaoTemporalActivity extends Activity {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if  (isChecked){
 					pontos = pontos +1;  Toast.makeText(OrientacaoTemporalActivity.this,String.valueOf(pontos),Toast.LENGTH_SHORT).show();
-
+					tgDiaSemana.setEnabled(false);
 				}
 				
 			}
@@ -48,7 +48,7 @@ public class OrientacaoTemporalActivity extends Activity {
 				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 					if  (isChecked){
 						pontos = pontos +1;  Toast.makeText(OrientacaoTemporalActivity.this,String.valueOf(pontos),Toast.LENGTH_SHORT).show();
-
+						tgDiaMes.setEnabled(false);
 					}
 					
 				}
@@ -61,7 +61,7 @@ public class OrientacaoTemporalActivity extends Activity {
 				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 					if  (isChecked){
 						pontos = pontos +1;  Toast.makeText(OrientacaoTemporalActivity.this,String.valueOf(pontos),Toast.LENGTH_SHORT).show();
-
+						tgMes.setEnabled(false);
 					}
 					
 				}
@@ -74,7 +74,7 @@ public class OrientacaoTemporalActivity extends Activity {
 				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 					if  (isChecked){
 						pontos = pontos +1;  Toast.makeText(OrientacaoTemporalActivity.this,String.valueOf(pontos),Toast.LENGTH_SHORT).show();
-
+						tgAno.setEnabled(false);
 					}
 					
 				}
@@ -87,7 +87,7 @@ public class OrientacaoTemporalActivity extends Activity {
 				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 					if  (isChecked){
 						pontos = pontos +1;  Toast.makeText(OrientacaoTemporalActivity.this,String.valueOf(pontos),Toast.LENGTH_SHORT).show();
-
+						tgHora.setEnabled(false);
 					}
 					
 				}

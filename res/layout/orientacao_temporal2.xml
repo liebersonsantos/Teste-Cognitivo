@@ -34,14 +34,6 @@
         android:layout_marginTop="22dp"
         android:text="Qual o dia da semana?" />
 
-    <ImageButton
-        android:id="@+id/imgbtnEnviarAtencaoCalculo"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/proximo" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -112,14 +104,6 @@
 	        android:textOn="Certo" />
 
 	    <TextView
-	        android:id="@+id/textView4"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/textView3"
-	        android:layout_centerVertical="true"
-	        android:text="Em que mês estamos?" />
-
-	    <TextView
 	        android:id="@+id/textView6"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -127,5 +111,23 @@
 	        android:layout_below="@+id/tgAno"
 	        android:layout_marginTop="36dp"
 	        android:text="Qual a hora aproximada?" />
+
+	    <ImageButton
+	        android:id="@+id/imgbtnEnviarAtencaoCalculo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="70dp"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/proximo" />
+
+	    <TextView
+	        android:id="@+id/textView4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textView3"
+	        android:layout_below="@+id/tgDiaMes"
+	        android:layout_marginTop="39dp"
+	        android:text="Em que mês estamos?" />
     	
 </RelativeLayout>
