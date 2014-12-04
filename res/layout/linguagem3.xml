@@ -49,24 +49,6 @@
         android:text="3 - Coloque o papel em cima da mesa."
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <ImageButton
-        android:id="@+id/imgbtnSeguirLinguagem3"
-        android:layout_width="120dp"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/proximo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVlinguagem3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_alignTop="@+id/imgbtnElinguagem3"
-        android:background="@drawable/ic_launcher_certo"
-        android:src="@drawable/ic_launcher_certo" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -79,14 +61,22 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <ImageButton
-        android:id="@+id/imgbtnElinguagem3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/imgbtnSeguirLinguagem3"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/proximo" />
+
+    <ToggleButton
+        android:id="@+id/tgLin3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView5"
-        android:layout_marginRight="36dp"
-        android:layout_marginTop="85dp"
-        android:layout_toLeftOf="@+id/imgbtnVlinguagem3"
-        android:background="@drawable/btnerrado"
-        android:src="@drawable/btnerrado" />
+        android:layout_marginTop="47dp"
+        android:textOff="Errado"
+        android:textOn="Certo" />
 
 </RelativeLayout>
