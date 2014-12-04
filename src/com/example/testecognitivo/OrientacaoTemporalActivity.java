@@ -99,6 +99,10 @@ public class OrientacaoTemporalActivity extends Activity {
 			public void onClick(View v) {
 				// Chama a proxima Activity
 				Intent intent = new Intent(OrientacaoTemporalActivity.this,	LocalizacaoActivity.class);
+				
+				/*
+				 * passa os valores para outra variavel
+				 */
 				intent.putExtra("pontos", pontos);
 				startActivity(intent);
 			}

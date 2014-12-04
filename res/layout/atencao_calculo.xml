@@ -25,90 +25,25 @@
         android:gravity="center"
         android:text="Peça para o paciente a palavra MUNDO de trás para frente. Estabeleça 1 ponto para cada acerto." />
 
-    <ImageButton
-        android:id="@+id/imgbtnVoMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_alignTop="@+id/imgbtnEoMundo"
-        android:src="@drawable/ic_launcher_certo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVdMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignLeft="@+id/imgbtnVoMundo"
-        android:layout_alignTop="@+id/imgbtnEdMundo"
-        android:src="@drawable/ic_launcher_certo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVnMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignLeft="@+id/imgbtnVdMundo"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_launcher_certo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVmMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignLeft="@+id/imgbtnVuMundo"
-        android:layout_alignTop="@+id/imgbtnEmMundo"
-        android:src="@drawable/ic_launcher_certo" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="27dp"
+        android:text="O"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_below="@+id/textView3"
-        android:layout_marginTop="18dp"
-        android:text="D"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="30sp" />
-
-    <ImageButton
-        android:id="@+id/imgbtnEoMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_above="@+id/imgbtnVdMundo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
-        android:src="@drawable/btnerrado" />
-
-    <ImageButton
-        android:id="@+id/imgbtnEdMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_above="@+id/imgbtnVnMundo"
-        android:layout_alignLeft="@+id/imgbtnEoMundo"
-        android:layout_marginBottom="19dp"
-        android:src="@drawable/btnerrado" />
-
-    <ImageButton
-        android:id="@+id/imgbtnEuMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_alignLeft="@+id/imgbtnEnMundo"
-        android:src="@drawable/btnerrado" />
-
-    <ImageButton
-        android:id="@+id/imgbtnEmMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignBottom="@+id/textView7"
-        android:layout_alignLeft="@+id/imgbtnEuMundo"
-        android:src="@drawable/btnerrado" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imgbtnEoMundo"
         android:layout_alignLeft="@+id/textView2"
-        android:text="O"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="17dp"
+        android:text="D"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="30sp" />
 
@@ -116,57 +51,86 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignTop="@+id/imgbtnEnMundo"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="19dp"
         android:text="N"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="30sp" />
-
-    <ImageButton
-        android:id="@+id/imgbtnEnMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignLeft="@+id/imgbtnEdMundo"
-        android:layout_below="@+id/imgbtnEdMundo"
-        android:src="@drawable/btnerrado" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView5"
-        android:layout_below="@+id/imgbtnEnMundo"
-        android:layout_marginTop="18dp"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="14dp"
         android:text="U"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="30sp" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVuMundo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignLeft="@+id/imgbtnVdMundo"
-        android:layout_alignTop="@+id/imgbtnEuMundo"
-        android:src="@drawable/ic_launcher_certo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnEnviarAtencaoCalculo"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imgbtnVmMundo"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/proximo" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignLeft="@+id/textView5"
         android:layout_below="@+id/textView6"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         android:text="M"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="30sp" />
+
+    <ToggleButton
+        android:id="@+id/tgO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignTop="@+id/textView3"
+        android:textOff="Errado"
+	    android:textOn="Certo" />
+
+    <ToggleButton
+        android:id="@+id/tgN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tgD"
+        android:layout_alignTop="@+id/textView5"
+        android:textOff="Errado"
+	    android:textOn="Certo" />
+
+    <ToggleButton
+        android:id="@+id/tgU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tgO"
+        android:layout_alignTop="@+id/textView6"
+        android:textOff="Errado"
+	    android:textOn="Certo" />
+
+    <ToggleButton
+        android:id="@+id/tgM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tgN"
+        android:layout_alignTop="@+id/textView7"
+        android:textOff="Errado"
+	    android:textOn="Certo" />
+
+    <ToggleButton
+        android:id="@+id/tgD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tgO"
+        android:layout_alignTop="@+id/textView4"
+        android:textOff="Errado"
+	    android:textOn="Certo" />
+
+    <ImageButton
+        android:id="@+id/imgbtnEnviarAtencaoCalculo"
+        android:layout_width="159dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/proximo" />
 
 </RelativeLayout>

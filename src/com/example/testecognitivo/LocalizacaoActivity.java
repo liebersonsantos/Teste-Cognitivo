@@ -113,12 +113,6 @@ public class LocalizacaoActivity extends Activity{
 				startActivity(intent);
 			}
 		});
-		
-		
-		
-		
-		
-		
-		
+				
 	}
 }
