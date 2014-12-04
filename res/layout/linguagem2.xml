@@ -15,43 +15,13 @@
         android:text="Linguagem II"
         android:textSize="20sp" />
 
-    <ImageButton
-        android:id="@+id/imgBtnEnviarLinguagem2"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/textView1"
-        android:background="@drawable/ic_action_send_now"
-        android:scaleType="fitXY"
-        android:src="@drawable/proximo" />
-
-    <ImageButton
-        android:id="@+id/imgbtnElinguagem"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignTop="@+id/imgbtnVlinguagem"
-        android:scaleType="center"
-        android:src="@drawable/ic_launcher" />
-
-    <ImageButton
-        android:id="@+id/imgbtnVlinguagem"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/imgBtnEnviarLinguagem2"
-        android:layout_marginBottom="135dp"
-        android:layout_toLeftOf="@+id/imgBtnEnviarLinguagem2"
-        android:scaleType="center"
-        android:src="@drawable/ic_launcher_certo" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imgbtnElinguagem"
+        android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="68dp"
+        android:layout_marginTop="43dp"
         android:text="Faça o paciente repetir..."
         android:textSize="20sp" />
 
@@ -59,10 +29,30 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="22dp"
+        android:layout_marginTop="52dp"
         android:text="&quot;...Nem aqui, nem alí, nem lá...&quot;"
         android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/imgBtnEnviarLinguagem2"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_action_send_now"
+        android:scaleType="fitXY"
+        android:src="@drawable/proximo" />
+
+    <ToggleButton
+        android:id="@+id/tgLin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textOff="Errado"
+        android:textOn="Certo" />
 
 </RelativeLayout>
