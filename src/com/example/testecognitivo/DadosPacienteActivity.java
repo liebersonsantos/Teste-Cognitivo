@@ -63,7 +63,7 @@ public class DadosPacienteActivity extends Activity {
 		spinnerEscolaridade.setAdapter(adapterEscolaridade);
 
 		/**
-		 * @author tairo Capitura o evento de clique do botão de salver
+		 * @author lieberson Captura o evento de clique do botão de salvar
 		 */
 		btnSalvarDadosPaciente.setOnClickListener(new View.OnClickListener() {
 			@Override

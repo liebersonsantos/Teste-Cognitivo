@@ -44,7 +44,7 @@ public class ResultadoActivity extends Activity {
 						medico.setId(bundleDados.getLong("id_medico"));
 						
 						//Resultado do calculo do teste cognitivo
-						//esse resltado deve ser calcu
+						//esse resultado deve ser calcu
 						Teste teste = new Teste();
 						teste.setIdPaciente(paciente.getId());
 						teste.setIdMedico(medico.getId());

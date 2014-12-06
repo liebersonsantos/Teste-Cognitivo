@@ -24,61 +24,44 @@
         android:id="@+id/edtSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtBenvindo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/txtSenha"
+        android:layout_alignLeft="@+id/edtNome"
+        android:layout_below="@+id/edtNome"
+        android:layout_marginTop="19dp"
         android:ems="10"
-        android:inputType="textPassword" >
-
-        <requestFocus />
-    </EditText>
+        android:gravity="center"
+        android:hint="SENHA"
+        android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/edtNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtBenvindo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/txtNome"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
-    <TextView
-        android:id="@+id/txtSenha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtNome"
+        android:layout_below="@+id/txtBenvindo"
         android:layout_centerHorizontal="true"
-        android:text="@string/string_txtSenha_login"
-        android:textSize="15sp" />
+        android:layout_marginTop="62dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="CRM"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/btnCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/txtBenvindo"
+        android:layout_marginBottom="50dp"
         android:text="@string/string_btnCadastrar_login" />
 
     <Button
         android:id="@+id/btnEntrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/edtSenha"
+        android:layout_alignTop="@+id/btnCadastrar"
         android:text="@string/string_btnEntrar_login" />
-
-    <TextView
-        android:id="@+id/txtNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtSenha"
-        android:layout_below="@+id/txtBenvindo"
-        android:layout_marginTop="120dp"
-        android:gravity="center_horizontal"
-        android:text="@string/string_txtNome_login"
-        android:textSize="15sp" />
 
 </RelativeLayout>

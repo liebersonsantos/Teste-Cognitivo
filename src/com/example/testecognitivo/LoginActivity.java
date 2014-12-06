@@ -13,6 +13,7 @@ public class LoginActivity extends Activity {
 
 	 private EditText edtNome,edtSenha;
 	 private Button btnEntrar, btnCadastrar;
+	 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class LoginActivity extends Activity {
 		edtSenha = (EditText) findViewById(R.id.edtSenha);
 		btnEntrar = (Button) findViewById(R.id.btnEntrar);
 		btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
-		
+				
 		btnCadastrar.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -36,6 +37,8 @@ public class LoginActivity extends Activity {
 				
 			}
 		});
+		
+	
 		btnEntrar.setOnClickListener(new View.OnClickListener() {
 				
 			@Override
