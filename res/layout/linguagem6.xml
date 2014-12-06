@@ -40,9 +40,9 @@
     <Button
         android:id="@+id/btnSeguirLinguagem6"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/proximo"
         android:text="Seguir" />
 

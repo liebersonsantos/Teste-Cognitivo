@@ -48,7 +48,7 @@ public class LoginActivity extends Activity {
 				if ((edtNome.getText().toString().equals("")) && (edtSenha.getText().toString().equals(""))) {					
 					
 					/**
-					 * @author tairo
+					 * @author lieberson
 					 * cria a Intent para ser enviada para outra Activity
 					 */
 					Intent intent = new Intent(LoginActivity.this,DadosPacienteActivity.class);

@@ -28,41 +28,32 @@
     <Button
         android:id="@+id/btnSeguirLinguagem7"
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/proximo"
         android:text="Seguir" />
-
-    <ImageButton
-        android:id="@+id/imgBtnVLinguagem7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/btnSeguirLinguagem7"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_marginBottom="69dp"
-        android:background="@drawable/ic_launcher_certo"
-        android:src="@drawable/abc_ab_share_pack_holo_dark" />
-
-    <ImageButton
-        android:id="@+id/imgBtnELinguagem7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignTop="@+id/imgBtnVLinguagem7"
-        android:background="@drawable/btnerrado"
-        android:src="@drawable/abc_ab_share_pack_holo_dark" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/textView2"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="91dp"
+        android:layout_marginTop="22dp"
         android:gravity="center"
         android:text="Estabeleça um ponto se todos os lados e ângulos forem preservados e se os lados da interseção formarem um quadrilátero."
         android:textSize="20sp" />
+
+    <ToggleButton
+        android:id="@+id/tgLin7"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:textOff="Errado"
+        android:textOn="Certo" />
 
 </RelativeLayout>
