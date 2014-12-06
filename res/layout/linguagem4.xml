@@ -16,15 +16,6 @@
         android:text="Linguagem IV"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <ImageButton
-        android:id="@+id/imgbtnComando"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/btncomando"
-        android:src="@drawable/abc_ab_share_pack_holo_dark" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="200dp"
@@ -36,5 +27,14 @@
         android:gravity="center"
         android:text="Faça o paciente ler e obedecer o seguinte comando..."
         android:textSize="30sp" />
+
+    <ImageButton
+        android:id="@+id/imgbtnComando"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btncomando"
+        android:src="@drawable/abc_ab_share_pack_holo_dark" />
 
 </RelativeLayout>

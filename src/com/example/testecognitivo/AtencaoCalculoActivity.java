@@ -118,7 +118,7 @@ public class AtencaoCalculoActivity extends Activity{
 				
 				Intent intent = new Intent(AtencaoCalculoActivity.this, LembrancasActivity.class);
 				startActivity(intent);
-				//passa para a prixima activity o valor da pontuação
+				//passa para a proxima activity o valor da pontuação
 				intent.putExtra("pontos", pontos);
 				startActivity(intent);
 			}

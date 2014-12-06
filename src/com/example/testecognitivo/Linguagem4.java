@@ -8,7 +8,8 @@ import android.widget.ImageButton;
 
 public class Linguagem4 extends Activity{
 	
-	ImageButton imgbtnComando;
+	private ImageButton imgbtnComando;
+	private int pontos;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +17,20 @@ public class Linguagem4 extends Activity{
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.linguagem4);
+		
+		/*
+		 * 1-pega a pontuacao da activity anterior
+		 * 2-Bundle para pegar os dados da intent
+		 * 3-passa os pontos da outra activity para a variavel PONTOS para poder
+		 * add os pontos desta activity
+		 */
+		Intent intentPontos = getIntent();				//1
+		
+		Bundle bundlePontos = intentPontos.getExtras();	//2
+		
+		pontos = bundlePontos.getInt("pontos");			//3
+		
+		
 	
 		imgbtnComando = (ImageButton) findViewById(R.id.imgbtnComando);
 		imgbtnComando.setOnClickListener(new View.OnClickListener() {
@@ -27,7 +42,11 @@ public class Linguagem4 extends Activity{
 				Intent intent = new Intent(Linguagem4.this, TelaComandoActivity.class);
 				startActivity(intent);
 				
-				
+				/*
+				 * passa os pontos acumulados desta, para a proxima activity
+				 */
+				intent.putExtra("pontos", pontos);
+				startActivity(intent);
 			}
 		});
 		
