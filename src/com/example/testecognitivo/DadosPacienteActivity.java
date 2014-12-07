@@ -102,12 +102,24 @@ public class DadosPacienteActivity extends Activity {
 					PacienteDAO pacienteDAO = new PacienteDAO(DadosPacienteActivity.this);
 					pacienteDAO.inserir(paciente);
 					
+					
 					//mostra a mensagem
 					Toast.makeText(DadosPacienteActivity.this, "Paciente salvo com sucesso..!!",Toast.LENGTH_SHORT).show();
 					
+					//Pega os dados do medico logado na activity anterior
+					Intent intentDados = getIntent();
+					Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+					
+					//para pegar o paciente pa proxima activity é só fazer
+					// Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+					
+					
 					//Vai para proxima tela
-					Intent intent = new Intent(DadosPacienteActivity.this,
-							Apresentacao.class);
+					Intent intent = new Intent(DadosPacienteActivity.this, Apresentacao.class);
+					
+					//Insere o medico e o paciente para enviar á proxima activity
+					intent.putExtra("medico", medico); //insere e instancia do medico para envio
+					intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio
 					startActivity(intent);
 				}				
 			}

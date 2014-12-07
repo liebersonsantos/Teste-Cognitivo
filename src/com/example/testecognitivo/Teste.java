@@ -1,6 +1,12 @@
 package com.example.testecognitivo;
 
-public class Teste {
+import java.io.Serializable;
+
+public class Teste implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long id;
 	private long idPaciente;
 	private long idMedico;

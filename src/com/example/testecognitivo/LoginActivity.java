@@ -53,14 +53,20 @@ public class LoginActivity extends Activity {
 				//Chama o DAO do medico para fazer o login
 				MedicoDAO medicoDAO = new  MedicoDAO(LoginActivity.this);
 				
-				if (medicoDAO.loginMedico(edtLogin.getText().toString(), edtSenha.getText().toString())) {	
+				//recebe os dados do medico logado e coloca em um objeto do tipo MEDICO
+				//para enviar para a proxima activity
+				Medico medico = medicoDAO.loginMedico(edtLogin.getText().toString(), edtSenha.getText().toString());
+				
+				//se for retornado o id é por que o medico está cadastrado e pode ser logado no sistema 
+				//se não retornar e pedido para o medico fazer o cadastro
+				if (medico.getId() != 0) {	
 					
 					/**
 					 * @author lieberson
 					 * cria a Intent para ser enviada para outra Activity
 					 */
 					Intent intent = new Intent(LoginActivity.this,DadosPacienteActivity.class);
-					intent.putExtra("nomeMedico", edtLogin.getText().toString());
+					intent.putExtra("medico", medico);//insere e instancia do medico para envio
 					startActivity(intent);					
 				}else{
 					Toast.makeText(LoginActivity.this, "Por favor faça o cadastro para de logar", Toast.LENGTH_SHORT).show();

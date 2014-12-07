@@ -72,16 +72,26 @@ public class MedicoDAO {
      * @param senha 
      * @return 
      */  
-    public boolean loginMedico(String login, String senha) {   	
+    public Medico loginMedico(String login, String senha) {   
+    	Medico medico = new Medico();
+    	
     	String[] columns = {"_id","nome","crm","especialidade","login","senha"};
     	String  where = "login = ? AND senha = ?";
     	String[] param = {login,senha};
     	
 		Cursor cursor = db.query("medico",columns, where, param, null, null, null);
 		if (cursor.getCount() > 0) {
-			return true;
+			cursor.moveToFirst();
+			
+			medico.setId(cursor.getLong(0));
+			medico.setNome(cursor.getString(1));
+			medico.setCrm(cursor.getString(2));
+			medico.setEspecialidade(cursor.getString(3));
+			medico.setLogin(cursor.getString(4));
+			medico.setSenha(cursor.getString(5));
+			return medico;
 		}else{
-			return false;
+			return medico;
 		}
     } 
 }
