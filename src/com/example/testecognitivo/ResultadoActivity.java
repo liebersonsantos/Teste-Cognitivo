@@ -10,7 +10,10 @@ import android.widget.Toast;
 public class ResultadoActivity extends Activity {
 
 	// Declaração das variáveis e objetos
-	Button btnCalcule;
+	private Button btnCalcule;
+	private int pontos;
+	String resultado;
+	
 	Teste teste = new Teste();
 
 	@Override
@@ -21,6 +24,16 @@ public class ResultadoActivity extends Activity {
 		setContentView(R.layout.resultado);
 		// Linka o Java com o Xml
 		btnCalcule = (Button) findViewById(R.id.btnCalcule);
+		
+		/*
+		 * 1-pega a pontuacao da activity anterior
+		 * 2-Bundle para pegar os dados da intent
+		 * 3-passa os pontos da outra activity para a variavel PONTOS para poder add 
+		 * os pontos desta activity
+		 */
+		Intent intentPontos = getIntent();					//1
+		Bundle bundlePontos = intentPontos.getExtras();		//2
+		pontos = bundlePontos.getInt("pontos");				//3	
 
 		// Pega os dados enviados das activities anteriores
 
@@ -41,19 +54,19 @@ public class ResultadoActivity extends Activity {
 			
 						Medico medico = (Medico) intentDados.getSerializableExtra("medico");
 						Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
-						String resultado;
+						
 						
 						//aqui vc faz a logica do teste e coloca o resultado em uma variavel
 						//esse resultado deve ser calculado
-						resultado = "resultado do teste";
-						
-						
-						
-						
-						
-						
-						
-						
+					/*	
+						if (pontos >= 27) {
+							resultado = "Sem Desvio Cognitivo - pontos: " + pontos;
+							}else if (pontos <= 24 ) {
+							resultado = "Leve Desvio Cognitivo - pontos: " + pontos;
+								}else if (pontos <= 19) {
+									resultado = "Alto Nivel de Desvio Cognitivo - pontos: " + pontos;
+								}
+						*/							
 						
 						//Armazena o resultado Resultado do calculo do teste cognitivo						
 						Teste teste = new Teste();						

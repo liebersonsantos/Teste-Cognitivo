@@ -57,8 +57,17 @@ public class Linguagem3 extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
+				Intent intentDados = getIntent();
+				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+				
 				Intent intent = new Intent(Linguagem3.this, Linguagem4.class);
 				startActivity(intent);
+					
+				
+				//Insere o medico e o paciente para enviar á proxima activity
+				intent.putExtra("medico", medico); //insere e instancia do medico para envio
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio						
 				
 				/*
 				 * acumula os pontos e passa para outra classe

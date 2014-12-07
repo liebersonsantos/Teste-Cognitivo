@@ -64,9 +64,19 @@ public class Linguagem2 extends Activity {
 				/**
 				 * @author lieberson envia para a tela de liguagem
 				 */
+				Intent intentDados = getIntent();
+				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+				
+				
 				Intent intent = new Intent(Linguagem2.this, Linguagem3.class);
 				startActivity(intent);
 				
+				
+				//Insere o medico e o paciente para enviar á proxima activity
+				intent.putExtra("medico", medico); //insere e instancia do medico para envio
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio
+							
 				/*
 				 * acumula os pontos e passa para a proxima classe
 				 */

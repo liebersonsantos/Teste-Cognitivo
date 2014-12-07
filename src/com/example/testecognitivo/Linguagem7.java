@@ -65,8 +65,17 @@ public class Linguagem7 extends Activity{
 				long id_paciente = 1;
 				long id_medico = 1;
 				
+				Intent intentDados = getIntent();
+				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+				
 				Intent intent = new Intent(Linguagem7.this, ResultadoActivity.class);
 				
+				//Insere o medico e o paciente para enviar á proxima activity
+				intent.putExtra("medico", medico); //insere e instancia do medico para envio
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio
+				startActivity(intent);			
+							
 				intent.putExtra("id_paciente", id_paciente);
 				intent.putExtra("id_medico", id_medico);
 				startActivity(intent);	

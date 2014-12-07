@@ -105,9 +105,19 @@ public class LocalizacaoActivity extends Activity{
 		btnProxiamPgLocalizacao.setOnClickListener(new View.OnClickListener() {			
 			@Override
 			public void onClick(View v) {
+				
+				Intent intentDados = getIntent();
+				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+				
 				// Chama a proxima activity				
 				Intent intent = new Intent(LocalizacaoActivity.this, RegistroActivity.class);
+								
+				//Insere o medico e o paciente para enviar á proxima activity
+				intent.putExtra("medico", medico); //insere e instancia do medico para envio
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio
 				
+							
 				//passa para a prixima activity o valor da pontuação
 				intent.putExtra("pontos", pontos);
 				startActivity(intent);

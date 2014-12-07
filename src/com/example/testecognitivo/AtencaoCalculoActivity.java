@@ -118,6 +118,15 @@ public class AtencaoCalculoActivity extends Activity{
 				
 				Intent intent = new Intent(AtencaoCalculoActivity.this, LembrancasActivity.class);
 				startActivity(intent);
+				
+				Intent intentDados = getIntent();
+				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+				
+				//Insere o medico e o paciente para enviar á proxima activity
+				intent.putExtra("medico", medico); //insere e instancia do medico para envio
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio							
+				
 				//passa para a proxima activity o valor da pontuação
 				intent.putExtra("pontos", pontos);
 				startActivity(intent);

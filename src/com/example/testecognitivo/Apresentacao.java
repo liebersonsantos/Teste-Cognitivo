@@ -9,6 +9,7 @@ import android.widget.Button;
 public class Apresentacao extends Activity {
 
 	Button btnInicioTeste;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +23,20 @@ public class Apresentacao extends Activity {
 		btnInicioTeste.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-				Intent intent = new Intent(Apresentacao.this,
-						OrientacaoTemporalActivity.class);
+				// TODO Auto-generated method stub			
+				
+				Intent intentDados = getIntent();
+				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+				
+				Intent intent = new Intent(Apresentacao.this, OrientacaoTemporalActivity.class);
+				
+				//Insere o medico e o paciente para enviar á proxima activity
+				intent.putExtra("medico", medico); //insere e instancia do medico para envio
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio
 				startActivity(intent);
-//
+				
+				
 			}
 		});
 
