@@ -108,11 +108,7 @@ public class DadosPacienteActivity extends Activity {
 					
 					//Pega os dados do medico logado na activity anterior
 					Intent intentDados = getIntent();
-					Medico medico = (Medico) intentDados.getSerializableExtra("medico");
-					
-					//para pegar o paciente pa proxima activity é só fazer
-					// Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
-					
+					Medico medico = (Medico) intentDados.getSerializableExtra("medico");							
 					
 					//Vai para proxima tela
 					Intent intent = new Intent(DadosPacienteActivity.this, Apresentacao.class);

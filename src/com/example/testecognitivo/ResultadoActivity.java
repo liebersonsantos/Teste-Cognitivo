@@ -11,8 +11,6 @@ public class ResultadoActivity extends Activity {
 
 	// Declaração das variáveis e objetos
 	Button btnCalcule;
-	Paciente paciente = new Paciente();
-	Medico medico = new Medico();
 	Teste teste = new Teste();
 
 	@Override
@@ -25,7 +23,7 @@ public class ResultadoActivity extends Activity {
 		btnCalcule = (Button) findViewById(R.id.btnCalcule);
 
 		// Pega os dados enviados das activities anteriores
-		final Intent intentDados = getIntent();
+
 
 		btnCalcule.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -33,22 +31,35 @@ public class ResultadoActivity extends Activity {
 
 				// Atribui os dados do Xml par o objeto, para que
 				// posso ser armazenado na base de dados
+				//Pega os dados do medico logado na activity anterior
+				Intent intentDados = getIntent();		
 
 				if (intentDados != null) {
 					Bundle bundleDados = intentDados.getExtras();
 
 					//se os dados não estiverem vazios guardamos na base de dados
-					if (bundleDados != null) {
+			
+						Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+						Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+						String resultado;
 						
-						paciente.setId(bundleDados.getLong("id_paciente"));
-						medico.setId(bundleDados.getLong("id_medico"));
+						//aqui vc faz a logica do teste e coloca o resultado em uma variavel
+						//esse resultado deve ser calculado
+						resultado = "resultado do teste";
 						
-						//Resultado do calculo do teste cognitivo
-						//esse resultado deve ser calcu
-						Teste teste = new Teste();
+						
+						
+						
+						
+						
+						
+						
+						
+						//Armazena o resultado Resultado do calculo do teste cognitivo						
+						Teste teste = new Teste();						
 						teste.setIdPaciente(paciente.getId());
 						teste.setIdMedico(medico.getId());
-						teste.setResultado("Reprovado no teste");				
+						teste.setResultado(resultado);				
 						
 						//Declarção de testeDAO para armazenar os dados
 						TesteDAO testeDAO = new TesteDAO(ResultadoActivity.this);
@@ -58,8 +69,6 @@ public class ResultadoActivity extends Activity {
 						
 						//Retorna uma mensagem na tela para o Médico
 						Toast.makeText(ResultadoActivity.this,"Resultado salvo com sucesso..!!", Toast.LENGTH_SHORT).show();
-
-					}
 
 				}
 
