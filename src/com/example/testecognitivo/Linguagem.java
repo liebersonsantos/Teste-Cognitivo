@@ -50,7 +50,7 @@ public class Linguagem extends Activity{
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked){
-					pontos = pontos +1;Toast.makeText(Linguagem.this, String.valueOf(pontos), Toast.LENGTH_SHORT).show();
+					pontos = pontos +2;Toast.makeText(Linguagem.this, String.valueOf(pontos), Toast.LENGTH_SHORT).show();
 					tgLinguagem.setEnabled(false);
 				}
 				
