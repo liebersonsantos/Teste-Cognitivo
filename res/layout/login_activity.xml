@@ -24,8 +24,8 @@
         android:id="@+id/edtSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtNome"
-        android:layout_below="@+id/edtNome"
+        android:layout_alignLeft="@+id/edtLogin"
+        android:layout_below="@+id/edtLogin"
         android:layout_marginTop="19dp"
         android:ems="10"
         android:gravity="center"
@@ -33,7 +33,7 @@
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/edtNome"
+        android:id="@+id/edtLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtBenvindo"
@@ -41,7 +41,7 @@
         android:layout_marginTop="62dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="CRM"
+        android:hint="LOGIN"
         android:inputType="textPersonName" >
 
         <requestFocus />

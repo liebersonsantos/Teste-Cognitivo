@@ -8,10 +8,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends Activity {
 
-	 private EditText edtNome,edtSenha;
+	 private EditText edtLogin,edtSenha;
 	 private Button btnEntrar, btnCadastrar;
 	 
 	
@@ -21,7 +22,7 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.login_activity);
 		
 		/** Linka os atributos do java com o xml*/
-		edtNome = (EditText) findViewById(R.id.edtNome);
+		edtLogin = (EditText) findViewById(R.id.edtLogin);
 		edtSenha = (EditText) findViewById(R.id.edtSenha);
 		btnEntrar = (Button) findViewById(R.id.btnEntrar);
 		btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
@@ -48,16 +49,21 @@ public class LoginActivity extends Activity {
 				 * Verificação de login 
 				 * se ususario for valido ira para tela de dados d paciente
 				 */
-				if ((edtNome.getText().toString().equals("")) && (edtSenha.getText().toString().equals(""))) {					
+				
+				//Chama o DAO do medico para fazer o login
+				MedicoDAO medicoDAO = new  MedicoDAO(LoginActivity.this);
+				
+				if (medicoDAO.loginMedico(edtLogin.getText().toString(), edtSenha.getText().toString())) {	
 					
 					/**
 					 * @author lieberson
 					 * cria a Intent para ser enviada para outra Activity
 					 */
 					Intent intent = new Intent(LoginActivity.this,DadosPacienteActivity.class);
-					intent.putExtra("nomeMedico", edtNome.getText().toString());
-					startActivity(intent);
-					
+					intent.putExtra("nomeMedico", edtLogin.getText().toString());
+					startActivity(intent);					
+				}else{
+					Toast.makeText(LoginActivity.this, "Por favor faça o cadastro para de logar", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
