@@ -61,9 +61,9 @@ public class ResultadoActivity extends Activity {
 						
 						if (pontos >= 27) {
 							resultado = "Sem Desvio Cognitivo - pontos: " + pontos;
-							}else if (pontos <= 24 ) {
+							}else if (pontos <= 24 && pontos >= 20 ) {
 							resultado = "Leve Desvio Cognitivo - pontos: " + pontos;
-								}else if (pontos <= 19) {
+								}else {
 									resultado = "Alto Nivel de Desvio Cognitivo - pontos: " + pontos;
 								}
 													
@@ -81,7 +81,7 @@ public class ResultadoActivity extends Activity {
 						testeDAO.inserir(teste,paciente,medico);
 						
 						//Retorna uma mensagem na tela para o Médico
-						Toast.makeText(ResultadoActivity.this,resultado, Toast.LENGTH_SHORT).show();
+						Toast.makeText(ResultadoActivity.this,resultado, Toast.LENGTH_LONG).show();
 						
 				}
 
