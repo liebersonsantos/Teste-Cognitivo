@@ -37,7 +37,9 @@ public class Linguagem extends Activity{
 		 * passa os pontos da outra activity para a variável "ponto"
 		 * para poder adicionar os pontos dessa Activity
 		 */
-		pontos = bundlePontos.getInt("pontos");
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}
 
 		/**
 		 * Linka as variaveis java com xml
@@ -67,12 +69,11 @@ public class Linguagem extends Activity{
 				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
 				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
 				
-				Intent intent = new Intent(Linguagem.this, Linguagem2.class);
-				startActivity(intent);		
+				Intent intent = new Intent(Linguagem.this, Linguagem2.class);	
 				
 				//Insere o medico e o paciente para enviar á proxima activity
 				intent.putExtra("medico", medico); //insere e instancia do medico para envio
-				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio							
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio	
 				
 				/*
 				 * passa os pontos desta para a proxima classe

@@ -35,7 +35,10 @@ public class Linguagem3 extends Activity {
 		 * passa os pontos da outra activity para a variável "ponto"
 		 * para poder adicionar os pontos dessa Activity
 		 */
-		pontos = bundlePontos.getInt("pontos");
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}
+		
 		
 		imgbtnSeguirLinguagem3 = (ImageButton) findViewById(R.id.imgbtnSeguirLinguagem3);
 		
@@ -61,13 +64,12 @@ public class Linguagem3 extends Activity {
 				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
 				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
 				
-				Intent intent = new Intent(Linguagem3.this, Linguagem4.class);
-				startActivity(intent);
-					
+				Intent intent = new Intent(Linguagem3.this, Linguagem4.class);					
 				
 				//Insere o medico e o paciente para enviar á proxima activity
 				intent.putExtra("medico", medico); //insere e instancia do medico para envio
-				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio						
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio	
+				
 				
 				/*
 				 * acumula os pontos e passa para outra classe

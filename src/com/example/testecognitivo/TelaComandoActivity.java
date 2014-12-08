@@ -36,7 +36,9 @@ public class TelaComandoActivity extends Activity{
 		
 		Bundle bundlePontos = intentPontos.getExtras();	//2
 		
-		pontos = bundlePontos.getInt("pontos");			//3
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}		//3
 		
 		
 		
@@ -69,11 +71,19 @@ public class TelaComandoActivity extends Activity{
 				 * chama a proxima activity
 				 */
 				Intent intent = new Intent(TelaComandoActivity.this, Linguagem5.class);
-				startActivity(intent);
+				
+				Intent intentDados = getIntent();
+				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+				
+				//Insere o medico e o paciente para enviar á proxima activity
+				intent.putExtra("medico", medico); //insere e instancia do medico para envio
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio	
 				
 				/*
 				 * passa os pontos acumulados desta, para a proxima activity
 				 */
+				
 				intent.putExtra("pontos", pontos);
 				startActivity(intent);
 				

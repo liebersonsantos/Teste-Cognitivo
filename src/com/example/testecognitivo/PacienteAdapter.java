@@ -56,16 +56,11 @@ public class PacienteAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View v) {
 				
-				Intent intent = new Intent(context,ResultadoActivity.class);
-				intent.putExtra("id", list.get(auxposition).getId());
-				intent.putExtra("nome", list.get(auxposition).getNome());
-				intent.putExtra("sexo", list.get(auxposition).getSexo());
-				intent.putExtra("dataNasc", list.get(auxposition).getDataNasc());
-				intent.putExtra("escolaridade", list.get(auxposition).getEscolaridade());
-				intent.putExtra("naturalidade", list.get(auxposition).getNaturalidade());
-				intent.putExtra("nacionalidade", list.get(auxposition).getNacionalidade());
-				context.startActivity(intent);
-								
+				Intent intent = new Intent(context,MostraResultado.class);
+				PacienteDAO pacienteDAO = new PacienteDAO(context);
+				Paciente paciente = pacienteDAO.getPaciente(list.get(auxposition).getId());
+				intent.putExtra("paciente", paciente);
+				context.startActivity(intent);								
 			}
 		});
 		return layout;

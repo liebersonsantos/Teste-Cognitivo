@@ -37,7 +37,10 @@ public class AtencaoCalculoActivity extends Activity{
 		 * passa os pontos da outra activity para a variável "ponto"
 		 * para poder adicionar os pontos dessa Activity
 		 */
-		pontos = bundlePontos.getInt("pontos");
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}
+		
 		
 		/*
 		 * Linka o Java com Xml
@@ -117,8 +120,7 @@ public class AtencaoCalculoActivity extends Activity{
 				// TODO Auto-generated method stub
 				
 				Intent intent = new Intent(AtencaoCalculoActivity.this, LembrancasActivity.class);
-				startActivity(intent);
-				
+								
 				Intent intentDados = getIntent();
 				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
 				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");

@@ -105,16 +105,13 @@ public class OrientacaoTemporalActivity extends Activity {
 				// Chama a proxima Activity
 				Intent intent = new Intent(OrientacaoTemporalActivity.this,	LocalizacaoActivity.class);				
 				
+				
 				//Insere o medico e o paciente para enviar á proxima activity
 				intent.putExtra("medico", medico); //insere e instancia do medico para envio
 				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio
-				startActivity(intent);				
-				
-				/*
-				 * passa os valores para outra variavel
-				 */
 				intent.putExtra("pontos", pontos);
-				startActivity(intent);
+				startActivity(intent);				
+
 			}
 		});
 

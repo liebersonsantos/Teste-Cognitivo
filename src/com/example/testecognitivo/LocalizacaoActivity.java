@@ -29,7 +29,9 @@ public class LocalizacaoActivity extends Activity{
 		
 		//passa os pontos da outra activity para a variável "ponto"
 		//para poder adicionar os pontos dessa Activity
-		pontos = bundlePontos.getInt("pontos");
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}
 				
 		//Linka o Java com Xml		
 		//Aqui precisa pegar todos os botões do xml para implementar o clique
@@ -115,8 +117,7 @@ public class LocalizacaoActivity extends Activity{
 								
 				//Insere o medico e o paciente para enviar á proxima activity
 				intent.putExtra("medico", medico); //insere e instancia do medico para envio
-				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio
-				
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio				
 							
 				//passa para a prixima activity o valor da pontuação
 				intent.putExtra("pontos", pontos);

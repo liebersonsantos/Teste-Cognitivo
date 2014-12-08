@@ -35,7 +35,9 @@ public class RegistroActivity extends Activity{
 	     * para poder adicionar os pontos dessa Activity
 	     */
 	    
-		pontos = bundlePontos.getInt("pontos");
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}
 						
 		/*
 		 * Linka o Java com Xml	
@@ -100,8 +102,7 @@ public class RegistroActivity extends Activity{
 				
 				//Insere o medico e o paciente para enviar á proxima activity
 				intent.putExtra("medico", medico); //insere e instancia do medico para envio
-				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio			
-							
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio	
 				
 				/*
 				 * passa para a prixima activity o valor da pontuação

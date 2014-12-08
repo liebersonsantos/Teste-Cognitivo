@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class Linguagem4 extends Activity{
 	
@@ -28,7 +29,9 @@ public class Linguagem4 extends Activity{
 		
 		Bundle bundlePontos = intentPontos.getExtras();	//2
 		
-		pontos = bundlePontos.getInt("pontos");			//3
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}		//3
 		
 		
 	
@@ -44,12 +47,10 @@ public class Linguagem4 extends Activity{
 				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
 				
 				Intent intent = new Intent(Linguagem4.this, TelaComandoActivity.class);
-				startActivity(intent);
 				
 				//Insere o medico e o paciente para enviar á proxima activity
 				intent.putExtra("medico", medico); //insere e instancia do medico para envio
-				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio
-				startActivity(intent);			
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio		
 				
 				/*
 				 * passa os pontos acumulados desta, para a proxima activity

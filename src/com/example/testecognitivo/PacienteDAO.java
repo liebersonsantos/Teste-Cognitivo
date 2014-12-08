@@ -72,4 +72,27 @@ public class PacienteDAO {
 		return(list);
 	}
 	
+    public Paciente getPaciente(long id) {   
+    	Paciente paciente = new Paciente();
+    	
+    	String[] columns = {"_id","nome","sexo","datanasc","escolaridade","naturalidade","nacionalidade"};
+    	String  where = "_id = ?";
+    	
+		Cursor cursor = db.query("paciente",columns, where, new String[]{""+id}, null, null, null);
+		if (cursor.getCount() > 0) {
+			cursor.moveToFirst();
+			
+			paciente.setId(cursor.getLong(0));
+			paciente.setNome(cursor.getString(1));
+			paciente.setSexo(cursor.getString(2));
+			paciente.setDataNasc(cursor.getString(3));
+			paciente.setEscolaridade(cursor.getString(4));
+			paciente.setNaturalidade(cursor.getString(5));
+			paciente.setNacionalidade(cursor.getString(6));
+			return paciente;
+		}else{
+			return paciente;
+		}
+    } 
+	
 }

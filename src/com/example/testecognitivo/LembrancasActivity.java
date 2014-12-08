@@ -37,7 +37,9 @@ public class LembrancasActivity extends Activity {
 		 * passa os pontos da outra activity para a variável "ponto"
 		 * para poder adicionar os pontos dessa Activity
 		 */
-		pontos = bundlePontos.getInt("pontos");		
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}
 		
 		/**
 		 * Linka as variaveis java com xml
@@ -95,11 +97,11 @@ public class LembrancasActivity extends Activity {
 				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
 				
 				Intent intent = new Intent(LembrancasActivity.this,Linguagem.class);
-				startActivity(intent);				
 				
 				//Insere o medico e o paciente para enviar á proxima activity
 				intent.putExtra("medico", medico); //insere e instancia do medico para envio
 				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio							
+				
 				
 				/*
 				 * Envia os valores para a proxima classe

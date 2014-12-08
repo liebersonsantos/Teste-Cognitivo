@@ -12,10 +12,7 @@ public class ResultadoActivity extends Activity {
 	// Declaração das variáveis e objetos
 	private Button btnCalcule;
 	private int pontos;
-	String resultado;
 	
-	Teste teste = new Teste();
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -33,7 +30,10 @@ public class ResultadoActivity extends Activity {
 		 */
 		Intent intentPontos = getIntent();					//1
 		Bundle bundlePontos = intentPontos.getExtras();		//2
-		pontos = bundlePontos.getInt("pontos");				//3	
+		
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}			//3	
 
 		// Pega os dados enviados das activities anteriores
 
@@ -54,11 +54,11 @@ public class ResultadoActivity extends Activity {
 			
 						Medico medico = (Medico) intentDados.getSerializableExtra("medico");
 						Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
-						
+						String resultado = "";
 						
 						//aqui vc faz a logica do teste e coloca o resultado em uma variavel
 						//esse resultado deve ser calculado
-					/*	
+						
 						if (pontos >= 27) {
 							resultado = "Sem Desvio Cognitivo - pontos: " + pontos;
 							}else if (pontos <= 24 ) {
@@ -66,7 +66,7 @@ public class ResultadoActivity extends Activity {
 								}else if (pontos <= 19) {
 									resultado = "Alto Nivel de Desvio Cognitivo - pontos: " + pontos;
 								}
-						*/							
+													
 						
 						//Armazena o resultado Resultado do calculo do teste cognitivo						
 						Teste teste = new Teste();						
@@ -81,8 +81,8 @@ public class ResultadoActivity extends Activity {
 						testeDAO.inserir(teste,paciente,medico);
 						
 						//Retorna uma mensagem na tela para o Médico
-						Toast.makeText(ResultadoActivity.this,"Resultado salvo com sucesso..!!", Toast.LENGTH_SHORT).show();
-
+						Toast.makeText(ResultadoActivity.this,resultado, Toast.LENGTH_SHORT).show();
+						
 				}
 
 			}

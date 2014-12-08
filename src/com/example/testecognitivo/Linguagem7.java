@@ -30,7 +30,10 @@ public class Linguagem7 extends Activity{
 		 */
 		Intent intentPontos = getIntent();					//1
 		Bundle bundlePontos = intentPontos.getExtras();		//2
-		pontos = bundlePontos.getInt("pontos");				//3	
+		
+		if (intentPontos != null) {
+			pontos = bundlePontos.getInt("pontos");
+		}			//3	
 		
 		btnSeguirLinguagem7 = (Button) findViewById(R.id.btnSeguirLinguagem7);
 		
@@ -60,11 +63,7 @@ public class Linguagem7 extends Activity{
 				 * envia para tela resultado
 				 */
 				
-				//pega o "id" do paciente e o "id" do medico que veio de outra tela
-				//aqui tem que modificar, pegar o id com uma intent de outra tela
-				long id_paciente = 1;
-				long id_medico = 1;
-				
+			
 				Intent intentDados = getIntent();
 				Medico medico = (Medico) intentDados.getSerializableExtra("medico");
 				Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
@@ -73,12 +72,7 @@ public class Linguagem7 extends Activity{
 				
 				//Insere o medico e o paciente para enviar á proxima activity
 				intent.putExtra("medico", medico); //insere e instancia do medico para envio
-				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio
-				startActivity(intent);			
-							
-				intent.putExtra("id_paciente", id_paciente);
-				intent.putExtra("id_medico", id_medico);
-				startActivity(intent);	
+				intent.putExtra("paciente", paciente);//insere e instancia do paciente para envio					
 				
 				/*
 				 * passa os pontos acumulados desta, para a proxima activity
