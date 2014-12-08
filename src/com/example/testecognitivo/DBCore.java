@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBCore extends SQLiteOpenHelper{
 	private static final String NOME_DB = "TesteCognitivo_db";
-	private static final int VERSAO_DB = 1;
+	private static final int VERSAO_DB = 2;
 
 	public DBCore(Context context) {
 		super(context, NOME_DB, null, VERSAO_DB);
