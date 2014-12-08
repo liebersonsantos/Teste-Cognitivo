@@ -44,23 +44,6 @@
         android:text="Nome do Paciente:" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_centerVertical="true"
-        android:text="Idade:" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_below="@+id/textView5"
-        android:layout_marginTop="33dp"
-        android:text="Escolaridade:" />
-
-    <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -107,35 +90,15 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/edtIdadeResult"
-        android:layout_width="85dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtNmPacienteResult"
-        android:layout_alignRight="@+id/edtNmPacienteResult"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:inputType="number" />
-
-    <EditText
         android:id="@+id/edtEscolResult"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView6"
         android:layout_alignBottom="@+id/textView6"
-        android:layout_alignLeft="@+id/edtIdadeResult"
+        android:layout_alignLeft="@+id/edtNmPacienteResult"
         android:layout_alignParentRight="true"
         android:ems="10"
         android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/edtResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView7"
-        android:layout_marginTop="24dp"
-        android:ems="10" />
 
     <Button
         android:id="@+id/btnCalcule"
@@ -143,7 +106,36 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@+id/txtResultadoPaciente"
         android:text="Calcule" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/edtNmPacienteResult"
+        android:layout_marginTop="33dp"
+        android:text="Escolaridade:" />
+
+    <TextView
+        android:id="@+id/txtResultadoPaciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView7"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignLeft="@+id/edtEscolResult"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btnListaDePacientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="Lista de pacientes" />
 
 </RelativeLayout>

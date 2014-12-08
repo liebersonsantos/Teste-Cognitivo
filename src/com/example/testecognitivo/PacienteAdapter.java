@@ -10,15 +10,18 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PacienteAdapter extends BaseAdapter {
 
 	private Context context;
 	private List<Paciente> list;
+	Medico medico;
 
-	public PacienteAdapter(Context context, List<Paciente> list) {
+	public PacienteAdapter(Context context, List<Paciente> list,Medico medico) {
 		this.context = context;
 		this.list = list;
+		this.medico = medico;
 	}
 
 	@Override
@@ -59,7 +62,14 @@ public class PacienteAdapter extends BaseAdapter {
 				Intent intent = new Intent(context,MostraResultado.class);
 				PacienteDAO pacienteDAO = new PacienteDAO(context);
 				Paciente paciente = pacienteDAO.getPaciente(list.get(auxposition).getId());
+				TesteDAO testeDAO = new TesteDAO(context);
+				
+				Teste teste = testeDAO.getTeste(String.valueOf(paciente.getId()), String.valueOf(medico.getId()));
 				intent.putExtra("paciente", paciente);
+				intent.putExtra("medico", medico);
+				intent.putExtra("teste", teste);
+				
+				Toast.makeText(context,teste.getIdMedico()+"-"+teste.getIdPaciente(), Toast.LENGTH_SHORT).show();
 				context.startActivity(intent);								
 			}
 		});

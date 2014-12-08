@@ -120,6 +120,13 @@ public class DadosPacienteActivity extends Activity {
 	// chama a Lista de pacientes cadastrados
 	public void listarPacientes( View view) {
 		Intent intent = new Intent(DadosPacienteActivity.this,ListaPaciente.class);
+		
+		//Pega os dados do medico logado na activity anterior
+		Intent intentDados = getIntent();
+		Medico medico = (Medico) intentDados.getSerializableExtra("medico");
+		
+		//Insere o medico e o paciente para enviar á proxima activity
+		intent.putExtra("medico", medico); //insere e instancia do medico para envio
 		startActivity(intent);
 	}
 }

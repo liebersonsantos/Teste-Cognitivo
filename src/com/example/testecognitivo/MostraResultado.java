@@ -18,15 +18,24 @@ public class MostraResultado extends Activity{
 			TextView nomeMedico = (TextView) findViewById(R.id.txtNmMedicoResult);
 			TextView crmMedico = (TextView) findViewById(R.id.txtCrmResultado);
 			TextView nomePaciente = (TextView) findViewById(R.id.txtNomePacienteResultado);
-			TextView idadePaciente = (TextView) findViewById(R.id.txtIdadePacienteResultado);
 			TextView escoPaciente = (TextView) findViewById(R.id.txtEscoPacienteResultado);
 			TextView txtResultado = (TextView) findViewById(R.id.txtResultPacienteResultado);
 			
 			
+			Medico medico = (Medico) intentDados.getSerializableExtra("medico");	
+			Paciente paciente = (Paciente) intentDados.getSerializableExtra("paciente");
+			Teste teste = (Teste) intentDados.getSerializableExtra("teste");
 			
 			
+			nomeMedico.setText(medico.getNome());
+			crmMedico.setText(medico.getCrm());
+			nomePaciente.setText(paciente.getNome());
+			int idade = 0;
+			escoPaciente.setText(paciente.getEscolaridade());
+			txtResultado.setText(teste.getResultado());
 			
 			
+						
 		}	
 	}
 }

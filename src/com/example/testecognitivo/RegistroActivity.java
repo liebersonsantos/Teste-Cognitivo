@@ -28,7 +28,8 @@ public class RegistroActivity extends Activity{
 		/*
 		 * Bundle para pegar os dados da intent
 		 */
-		Bundle bundlePontos = intentPontos.getExtras();
+			
+			Bundle bundlePontos = intentPontos.getExtras();		
 				
 	    /*
 	     * passa os pontos da outra activity para a variável "ponto"

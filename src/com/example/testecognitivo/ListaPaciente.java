@@ -2,6 +2,7 @@ package com.example.testecognitivo;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.BaseAdapter;
@@ -17,10 +18,13 @@ public class ListaPaciente extends ActionBarActivity{
 		
 		//Linka o Xml com o java
 		ListView listaPacientes = (ListView) findViewById(R.id.lista);	
+		//Pega os dados do medico logado na activity anterior
+		Intent intentDados = getIntent();
+		Medico medico = (Medico) intentDados.getSerializableExtra("medico");
 		
 		//Buscar todos os pacientes da base de dados 
 		PacienteDAO pacienteDAO = new  PacienteDAO(this);		
-		BaseAdapter adapter = new PacienteAdapter(this, pacienteDAO.buscar());
+		BaseAdapter adapter = new PacienteAdapter(this, pacienteDAO.buscar(),medico);
 		
 		//MedicoDAO medicoDAO = new  MedicoDAO(ListaPaciente.this);		
 		//BaseAdapter adapter = new MedicoAdapter(ListaPaciente.this, medicoDAO.buscar());

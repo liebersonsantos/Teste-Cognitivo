@@ -57,6 +57,7 @@
         <activity android:name=".ResultadoActivity">
         </activity>
         <activity android:name="com.example.testecognitivo.ListaPaciente"></activity>
+        <activity android:name="com.example.testecognitivo.MostraResultado"></activity>
     </application>
 
 </manifest>
